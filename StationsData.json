@@ -1,0 +1,2493 @@
+{ "StationsData":[
+        {
+            "id": "150101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH37",
+            "stationName": "栄生",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150102",
+            "lineName": "名古屋本線",
+            "stationNum": "NH40",
+            "stationName": "二ツ杁",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150103",
+            "lineName": "名古屋本線",
+            "stationNum": "NH42",
+            "stationName": "須ヶ口",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150104",
+            "lineName": "名古屋本線",
+            "stationNum": "NH43",
+            "stationName": "丸ノ内",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150105",
+            "lineName": "名古屋本線",
+            "stationNum": "NH44",
+            "stationName": "新清洲",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150106",
+            "lineName": "名古屋本線",
+            "stationNum": "NH45",
+            "stationName": "大里",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150107",
+            "lineName": "名古屋本線",
+            "stationNum": "NH46",
+            "stationName": "奥田",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150108",
+            "lineName": "名古屋本線",
+            "stationNum": "NH47",
+            "stationName": "国府宮",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150109",
+            "lineName": "名古屋本線",
+            "stationNum": "NH48",
+            "stationName": "島氏永",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150110",
+            "lineName": "名古屋本線",
+            "stationNum": "NH49",
+            "stationName": "妙興寺",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150111",
+            "lineName": "名古屋本線",
+            "stationNum": "NH50",
+            "stationName": "名鉄一宮",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150112",
+            "lineName": "名古屋本線",
+            "stationNum": "NH51",
+            "stationName": "今伊勢",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150113",
+            "lineName": "名古屋本線",
+            "stationNum": "NH52",
+            "stationName": "石刀",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150114",
+            "lineName": "名古屋本線",
+            "stationNum": "NH53",
+            "stationName": "新木曽川",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150115",
+            "lineName": "名古屋本線",
+            "stationNum": "NH54",
+            "stationName": "黒田",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150116",
+            "lineName": "名古屋本線",
+            "stationNum": "NH55",
+            "stationName": "木曽川堤",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150117",
+            "lineName": "名古屋本線",
+            "stationNum": "NH56",
+            "stationName": "笠松",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150118",
+            "lineName": "名古屋本線",
+            "stationNum": "NH57",
+            "stationName": "岐南",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150119",
+            "lineName": "名古屋本線",
+            "stationNum": "NH58",
+            "stationName": "茶所",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150120",
+            "lineName": "名古屋本線",
+            "stationNum": "NH59",
+            "stationName": "加納",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150121",
+            "lineName": "名古屋本線",
+            "stationNum": "NH60",
+            "stationName": "名鉄岐阜",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150201",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS12",
+            "stationName": "観音寺",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150202",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS13",
+            "stationName": "苅安賀",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150203",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS14",
+            "stationName": "二子",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150204",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS15",
+            "stationName": "萩原",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150205",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS16",
+            "stationName": "玉野",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150206",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS17",
+            "stationName": "山崎",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150207",
+            "lineName": "尾西線（名鉄一宮〜森上）",
+            "stationNum": "BS18",
+            "stationName": "森上",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150301",
+            "lineName": "尾西線（名鉄一宮〜玉ノ井）",
+            "stationNum": "BS21",
+            "stationName": "西一宮",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150302",
+            "lineName": "尾西線（名鉄一宮〜玉ノ井）",
+            "stationNum": "BS22",
+            "stationName": "開明",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150303",
+            "lineName": "尾西線（名鉄一宮〜玉ノ井）",
+            "stationNum": "BS23",
+            "stationName": "奥町",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150304",
+            "lineName": "尾西線（名鉄一宮〜玉ノ井）",
+            "stationNum": "BS24",
+            "stationName": "玉ノ井",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150401",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH01",
+            "stationName": "西笠松",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150402",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH02",
+            "stationName": "柳津",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150403",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH03",
+            "stationName": "南宿",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150404",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH04",
+            "stationName": "須賀",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150405",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH05",
+            "stationName": "不破一色",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150406",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH06",
+            "stationName": "竹鼻",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150407",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH07",
+            "stationName": "羽島市役所前",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150408",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH08",
+            "stationName": "江吉良",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150409",
+            "lineName": "竹鼻線・羽島線",
+            "stationNum": "TH09",
+            "stationName": "新羽島",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150501",
+            "lineName": "各務原線",
+            "stationNum": "KG16",
+            "stationName": "田神",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150502",
+            "lineName": "各務原線",
+            "stationNum": "KG15",
+            "stationName": "細畑",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150503",
+            "lineName": "各務原線",
+            "stationNum": "KG14",
+            "stationName": "切通",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150504",
+            "lineName": "各務原線",
+            "stationNum": "KG13",
+            "stationName": "手力",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150505",
+            "lineName": "各務原線",
+            "stationNum": "KG12",
+            "stationName": "高田橋",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150506",
+            "lineName": "各務原線",
+            "stationNum": "KG11",
+            "stationName": "新加納",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "150507",
+            "lineName": "各務原線",
+            "stationNum": "KG10",
+            "stationName": "新那加",
+            "trackNum": "1",
+            "position": "一宮・岐阜方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "160101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH38",
+            "stationName": "東枇杷島",
+            "trackNum": "1",
+            "position": "須ヶ口・国府宮方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "160101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH39",
+            "stationName": "西枇杷島",
+            "trackNum": "1",
+            "position": "須ヶ口・国府宮方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "160101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH41",
+            "stationName": "新川橋",
+            "trackNum": "1",
+            "position": "須ヶ口・国府宮方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "170601",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB01",
+            "stationName": "甚目寺",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170602",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB02",
+            "stationName": "七宝",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170603",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB03",
+            "stationName": "木田",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170604",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB04",
+            "stationName": "青塚",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170605",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB05",
+            "stationName": "勝幡",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170606",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB06",
+            "stationName": "藤浪",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170607",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB07",
+            "stationName": "津島",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170608",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB08",
+            "stationName": "日比野",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170609",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB09",
+            "stationName": "佐屋",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170610",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB10",
+            "stationName": "五ノ三",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "170611",
+            "lineName": "津島線・尾西線",
+            "stationNum": "TB11",
+            "stationName": "弥富",
+            "trackNum": "1",
+            "position": "津島・弥富方面",
+            "positionColor": "紫",
+            "color": "purple"
+        },
+        {
+            "id": "180802",
+            "lineName": "犬山線",
+            "stationNum": "IY03",
+            "stationName": "上小田井",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180803",
+            "lineName": "犬山線",
+            "stationNum": "IY04",
+            "stationName": "西春",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180804",
+            "lineName": "犬山線",
+            "stationNum": "IY07",
+            "stationName": "岩倉",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180805",
+            "lineName": "犬山線",
+            "stationNum": "IY08",
+            "stationName": "石仏",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180806",
+            "lineName": "犬山線",
+            "stationNum": "IY09",
+            "stationName": "布袋",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180807",
+            "lineName": "犬山線",
+            "stationNum": "IY10",
+            "stationName": "江南",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180808",
+            "lineName": "犬山線",
+            "stationNum": "IY11",
+            "stationName": "柏森",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180809",
+            "lineName": "犬山線",
+            "stationNum": "IY12",
+            "stationName": "扶桑",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180810",
+            "lineName": "犬山線",
+            "stationNum": "IY13",
+            "stationName": "木津用水",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180811",
+            "lineName": "犬山線",
+            "stationNum": "IY14",
+            "stationName": "犬山口",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180812",
+            "lineName": "犬山線",
+            "stationNum": "IY15",
+            "stationName": "犬山",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180813",
+            "lineName": "犬山線",
+            "stationNum": "IY16",
+            "stationName": "犬山遊園",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180814",
+            "lineName": "犬山線",
+            "stationNum": "IY17",
+            "stationName": "新鵜沼",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180901",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM01",
+            "stationName": "富岡前",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180902",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM02",
+            "stationName": "善師野",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180903",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM03",
+            "stationName": "西可児",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180904",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM04",
+            "stationName": "可児川",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180905",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM05",
+            "stationName": "日本ライン今渡",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180906",
+            "lineName": "広見線（犬山〜新可児）",
+            "stationNum": "HM06",
+            "stationName": "新可児",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180907",
+            "lineName": "広見線（新可児〜御嵩）",
+            "stationNum": "HM07",
+            "stationName": "明智",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180908",
+            "lineName": "広見線（新可児〜御嵩）",
+            "stationNum": "HM08",
+            "stationName": "顔戸",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180909",
+            "lineName": "広見線（新可児〜御嵩）",
+            "stationNum": "HM09",
+            "stationName": "御嵩口",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180910",
+            "lineName": "広見線（新可児〜御嵩）",
+            "stationNum": "HM10",
+            "stationName": "御嵩",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180501",
+            "lineName": "各務原線",
+            "stationNum": "KG01",
+            "stationName": "鵜沼宿",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180502",
+            "lineName": "各務原線",
+            "stationNum": "KG02",
+            "stationName": "羽場",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180503",
+            "lineName": "各務原線",
+            "stationNum": "KG03",
+            "stationName": "苧ヶ瀬",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180504",
+            "lineName": "各務原線",
+            "stationNum": "KG04",
+            "stationName": "名電各務原",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180505",
+            "lineName": "各務原線",
+            "stationNum": "KG05",
+            "stationName": "二十軒",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180506",
+            "lineName": "各務原線",
+            "stationNum": "KG06",
+            "stationName": "三柿野",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180507",
+            "lineName": "各務原線",
+            "stationNum": "KG07",
+            "stationName": "六軒",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180508",
+            "lineName": "各務原線",
+            "stationNum": "KG08",
+            "stationName": "各務原市役所前",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "180509",
+            "lineName": "各務原線",
+            "stationNum": "KG09",
+            "stationName": "市民公園前",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181001",
+            "lineName": "小牧線",
+            "stationNum": "KM01",
+            "stationName": "羽黒",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181002",
+            "lineName": "小牧線",
+            "stationNum": "KM02",
+            "stationName": "楽田",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181003",
+            "lineName": "小牧線",
+            "stationNum": "KM03",
+            "stationName": "田県神社前",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181004",
+            "lineName": "小牧線",
+            "stationNum": "KM04",
+            "stationName": "味岡",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181005",
+            "lineName": "小牧線",
+            "stationNum": "KM05",
+            "stationName": "小牧原",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181006",
+            "lineName": "小牧線",
+            "stationNum": "KM06",
+            "stationName": "小牧",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181007",
+            "lineName": "小牧線",
+            "stationNum": "KM07",
+            "stationName": "小牧口",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181008",
+            "lineName": "小牧線",
+            "stationNum": "KM08",
+            "stationName": "間内",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181009",
+            "lineName": "小牧線",
+            "stationNum": "KM09",
+            "stationName": "牛山",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181010",
+            "lineName": "小牧線",
+            "stationNum": "KM10",
+            "stationName": "春日井",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181011",
+            "lineName": "小牧線",
+            "stationNum": "KM11",
+            "stationName": "味美",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181012",
+            "lineName": "小牧線",
+            "stationNum": "KM12",
+            "stationName": "味鋺",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "181013",
+            "lineName": "小牧線",
+            "stationNum": "KM13",
+            "stationName": "上飯田",
+            "trackNum": "1",
+            "position": "犬山・可児方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "190802",
+            "lineName": "犬山線",
+            "stationNum": "IY01",
+            "stationName": "下小田井",
+            "trackNum": "1",
+            "position": "西春・岩倉方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        },
+        {
+            "id": "190803",
+            "lineName": "犬山線",
+            "stationNum": "IY02",
+            "stationName": "中小田井",
+            "trackNum": "1",
+            "position": "西春・岩倉方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        },
+        {
+            "id": "190804",
+            "lineName": "犬山線",
+            "stationNum": "IY05",
+            "stationName": "徳重・名古屋芸大",
+            "trackNum": "1",
+            "position": "西春・岩倉方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        },
+        {
+            "id": "190805",
+            "lineName": "犬山線",
+            "stationNum": "IY06",
+            "stationName": "大山寺",
+            "trackNum": "1",
+            "position": "西春・岩倉方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        },
+        {
+            "id": "410101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH34",
+            "stationName": "金山",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410102",
+            "lineName": "名古屋本線",
+            "stationNum": "NH33",
+            "stationName": "神宮前",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410103",
+            "lineName": "名古屋本線",
+            "stationNum": "NH32",
+            "stationName": "堀田",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410104",
+            "lineName": "名古屋本線",
+            "stationNum": "NH27",
+            "stationName": "鳴海",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410105",
+            "lineName": "名古屋本線",
+            "stationNum": "NH26",
+            "stationName": "左京山",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410106",
+            "lineName": "名古屋本線",
+            "stationNum": "NH25",
+            "stationName": "有松",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410107",
+            "lineName": "名古屋本線",
+            "stationNum": "NH24",
+            "stationName": "中京競馬場前",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410108",
+            "lineName": "名古屋本線",
+            "stationNum": "NH23",
+            "stationName": "前後",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410109",
+            "lineName": "名古屋本線",
+            "stationNum": "NH22",
+            "stationName": "豊明",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410110",
+            "lineName": "名古屋本線",
+            "stationNum": "NH21",
+            "stationName": "富士松",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410111",
+            "lineName": "名古屋本線",
+            "stationNum": "NH20",
+            "stationName": "一ツ木",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410112",
+            "lineName": "名古屋本線",
+            "stationNum": "NH19",
+            "stationName": "知立",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410113",
+            "lineName": "名古屋本線",
+            "stationNum": "NH18",
+            "stationName": "牛田",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410114",
+            "lineName": "名古屋本線",
+            "stationNum": "NH17",
+            "stationName": "新安城",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410115",
+            "lineName": "名古屋本線",
+            "stationNum": "NH16",
+            "stationName": "宇頭",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410116",
+            "lineName": "名古屋本線",
+            "stationNum": "NH15",
+            "stationName": "矢作橋",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410117",
+            "lineName": "名古屋本線",
+            "stationNum": "NH14",
+            "stationName": "岡崎公園前",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410118",
+            "lineName": "名古屋本線",
+            "stationNum": "NH13",
+            "stationName": "東岡崎",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410119",
+            "lineName": "名古屋本線",
+            "stationNum": "NH12",
+            "stationName": "男川",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410120",
+            "lineName": "名古屋本線",
+            "stationNum": "NH11",
+            "stationName": "美合",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410121",
+            "lineName": "名古屋本線",
+            "stationNum": "NH10",
+            "stationName": "藤川",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410122",
+            "lineName": "名古屋本線",
+            "stationNum": "NH9",
+            "stationName": "名電山中",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410123",
+            "lineName": "名古屋本線",
+            "stationNum": "NH8",
+            "stationName": "本宿",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410124",
+            "lineName": "名古屋本線",
+            "stationNum": "NH7",
+            "stationName": "名電長沢",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410125",
+            "lineName": "名古屋本線",
+            "stationNum": "NH6",
+            "stationName": "名電赤坂",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410126",
+            "lineName": "名古屋本線",
+            "stationNum": "NH5",
+            "stationName": "御油",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410127",
+            "lineName": "名古屋本線",
+            "stationNum": "NH4",
+            "stationName": "国府",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410128",
+            "lineName": "名古屋本線",
+            "stationNum": "NH3",
+            "stationName": "小田渕",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410129",
+            "lineName": "名古屋本線",
+            "stationNum": "NH2",
+            "stationName": "伊奈",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410130",
+            "lineName": "名古屋本線",
+            "stationNum": "NH1",
+            "stationName": "豊橋",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410201",
+            "lineName": "豊川線",
+            "stationNum": "TK01",
+            "stationName": "八幡",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410202",
+            "lineName": "豊川線",
+            "stationNum": "TK02",
+            "stationName": "諏訪町",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410203",
+            "lineName": "豊川線",
+            "stationNum": "TK03",
+            "stationName": "稲荷口",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410204",
+            "lineName": "豊川線",
+            "stationNum": "TK04",
+            "stationName": "豊川稲荷",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410301",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN01",
+            "stationName": "北安城",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410302",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN02",
+            "stationName": "南安城",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410303",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN03",
+            "stationName": "碧海古井",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410304",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN04",
+            "stationName": "堀内公園",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410305",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN05",
+            "stationName": "桜井",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410306",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN06",
+            "stationName": "南桜井",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410307",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN07",
+            "stationName": "米津",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410308",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN08",
+            "stationName": "桜町前",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410309",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN09",
+            "stationName": "西尾口",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410310",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN10",
+            "stationName": "西尾",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410311",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN11",
+            "stationName": "福地",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410312",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN12",
+            "stationName": "上横須賀",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410313",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN13",
+            "stationName": "吉良吉田",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410314",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN14",
+            "stationName": "三河鳥羽",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410315",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN15",
+            "stationName": "西幡豆",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410316",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN16",
+            "stationName": "東幡豆",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410317",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN17",
+            "stationName": "こどもの国",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410318",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN18",
+            "stationName": "西浦",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410319",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN19",
+            "stationName": "形原",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410320",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN20",
+            "stationName": "三河鹿島",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410321",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN21",
+            "stationName": "蒲郡競艇場前",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410322",
+            "lineName": "西尾線・蒲郡線",
+            "stationNum": "GN22",
+            "stationName": "蒲郡",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410401",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU01",
+            "stationName": "重原",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410402",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU02",
+            "stationName": "刈谷",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410403",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU03",
+            "stationName": "刈谷市",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410404",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU04",
+            "stationName": "小垣江",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410405",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU05",
+            "stationName": "吉浜",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410406",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU06",
+            "stationName": "三河高浜",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410407",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU07",
+            "stationName": "高浜港",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410408",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU08",
+            "stationName": "北新川",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410409",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU09",
+            "stationName": "新川町",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410410",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU10",
+            "stationName": "碧南中央",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410411",
+            "lineName": "三河線（知立〜碧南）",
+            "stationNum": "MU11",
+            "stationName": "碧南中央",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410412",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY01",
+            "stationName": "三河知立",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410413",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY02",
+            "stationName": "三河八橋",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410414",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY03",
+            "stationName": "若林",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410415",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY04",
+            "stationName": "竹村",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410416",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY05",
+            "stationName": "土橋",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410417",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY06",
+            "stationName": "上挙母",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410418",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY07",
+            "stationName": "豊田市",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410419",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY08",
+            "stationName": "梅坪",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410420",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY09",
+            "stationName": "越戸",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410421",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY10",
+            "stationName": "平戸橋",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410422",
+            "lineName": "三河線（知立〜猿投）",
+            "stationNum": "MY11",
+            "stationName": "猿投",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410501",
+            "lineName": "豊田線",
+            "stationNum": "TT01",
+            "stationName": "上豊田",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410502",
+            "lineName": "豊田線",
+            "stationNum": "TT02",
+            "stationName": "浄水",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410503",
+            "lineName": "豊田線",
+            "stationNum": "TT03",
+            "stationName": "三好ヶ丘",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410504",
+            "lineName": "豊田線",
+            "stationNum": "TT04",
+            "stationName": "黒笹",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410505",
+            "lineName": "豊田線",
+            "stationNum": "TT05",
+            "stationName": "米野木",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410506",
+            "lineName": "豊田線",
+            "stationNum": "TT06",
+            "stationName": "日進",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "410507",
+            "lineName": "豊田線",
+            "stationNum": "TT07",
+            "stationName": "赤池",
+            "trackNum": "4",
+            "position": "岡崎・豊橋方面",
+            "positionColor": "青",
+            "color": "blue"
+        },
+        {
+            "id": "420101",
+            "lineName": "名古屋本線",
+            "stationNum": "NH35",
+            "stationName": "山王",
+            "trackNum": "4",
+            "position": "鳴海・豊明方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "420102",
+            "lineName": "名古屋本線",
+            "stationNum": "NH31",
+            "stationName": "呼続",
+            "trackNum": "4",
+            "position": "鳴海・豊明方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "420103",
+            "lineName": "名古屋本線",
+            "stationNum": "NH30",
+            "stationName": "桜",
+            "trackNum": "4",
+            "position": "鳴海・豊明方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "420104",
+            "lineName": "名古屋本線",
+            "stationNum": "NH29",
+            "stationName": "本笠寺",
+            "trackNum": "4",
+            "position": "鳴海・豊明方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "420105",
+            "lineName": "名古屋本線",
+            "stationNum": "NH28",
+            "stationName": "本星崎",
+            "trackNum": "4",
+            "position": "鳴海・豊明方面",
+            "positionColor": "黄",
+            "color": "yellow"
+        },
+        {
+            "id": "430605",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA03",
+            "stationName": "大江",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430606",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA04",
+            "stationName": "大同町",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430607",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA05",
+            "stationName": "柴田",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430608",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA06",
+            "stationName": "名和",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430609",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA07",
+            "stationName": "聚楽園",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430610",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA08",
+            "stationName": "新日鉄前",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430611",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA09",
+            "stationName": "太田川",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430612",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA10",
+            "stationName": "尾張横須賀",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430613",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA11",
+            "stationName": "寺本",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430614",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA12",
+            "stationName": "朝倉",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430615",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA13",
+            "stationName": "古見",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430616",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA14",
+            "stationName": "長浦",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430617",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA15",
+            "stationName": "日長",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430618",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA16",
+            "stationName": "新舞子",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430619",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA17",
+            "stationName": "大野町",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430620",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA18",
+            "stationName": "西ノ口",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430621",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA19",
+            "stationName": "蒲池",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430622",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA20",
+            "stationName": "榎戸",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430623",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA21",
+            "stationName": "多谷",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430624",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA22",
+            "stationName": "常滑",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430625",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA23",
+            "stationName": "りんくう常滑",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430626",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA24",
+            "stationName": "中部国際空港",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430701",
+            "lineName": "築港線",
+            "stationNum": "CH03",
+            "stationName": "東名古屋港",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430801",
+            "lineName": "河和線",
+            "stationNum": "KC01",
+            "stationName": "高横須賀",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430802",
+            "lineName": "河和線",
+            "stationNum": "KC03",
+            "stationName": "南加木屋",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430803",
+            "lineName": "河和線",
+            "stationNum": "KC04",
+            "stationName": "八幡新田",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430804",
+            "lineName": "河和線",
+            "stationNum": "KC05",
+            "stationName": "巽ヶ丘",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430805",
+            "lineName": "河和線",
+            "stationNum": "KC06",
+            "stationName": "白沢",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430806",
+            "lineName": "河和線",
+            "stationNum": "KC07",
+            "stationName": "坂部",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430807",
+            "lineName": "河和線",
+            "stationNum": "KC08",
+            "stationName": "阿久比",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430808",
+            "lineName": "河和線",
+            "stationNum": "KC09",
+            "stationName": "植大",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430809",
+            "lineName": "河和線",
+            "stationNum": "KC10",
+            "stationName": "半田口",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430810",
+            "lineName": "河和線",
+            "stationNum": "KC11",
+            "stationName": "住吉町",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430811",
+            "lineName": "河和線",
+            "stationNum": "KC12",
+            "stationName": "知多半田",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430812",
+            "lineName": "河和線",
+            "stationNum": "KC13",
+            "stationName": "成岩",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430813",
+            "lineName": "河和線",
+            "stationNum": "KC14",
+            "stationName": "青山",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430814",
+            "lineName": "河和線",
+            "stationNum": "KC15",
+            "stationName": "上ゲ",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430815",
+            "lineName": "河和線",
+            "stationNum": "KC16",
+            "stationName": "知多武豊",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430816",
+            "lineName": "河和線",
+            "stationNum": "KC17",
+            "stationName": "冨貴",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430817",
+            "lineName": "河和線",
+            "stationNum": "KC18",
+            "stationName": "河和口",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430818",
+            "lineName": "河和線",
+            "stationNum": "KC19",
+            "stationName": "河和",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430901",
+            "lineName": "知多新線",
+            "stationNum": "KC20",
+            "stationName": "上野間",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430902",
+            "lineName": "知多新線",
+            "stationNum": "KC21",
+            "stationName": "美浜緑苑",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430903",
+            "lineName": "知多新線",
+            "stationNum": "KC22",
+            "stationName": "知多奥田",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430904",
+            "lineName": "知多新線",
+            "stationNum": "KC23",
+            "stationName": "野間",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "430905",
+            "lineName": "知多新線",
+            "stationNum": "KC24",
+            "stationName": "内海",
+            "trackNum": "4",
+            "position": "河和・内海・中部国際空港方面方面",
+            "positionColor": "緑",
+            "color": "green"
+        },
+        {
+            "id": "440601",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA01",
+            "stationName": "豊田本町",
+            "trackNum": "4",
+            "position": "大江・太田川方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        },
+        {
+            "id": "440602",
+            "lineName": "常滑線・空港線",
+            "stationNum": "TA02",
+            "stationName": "道徳",
+            "trackNum": "4",
+            "position": "大江・太田川方面",
+            "positionColor": "水色",
+            "color": "lightBlue"
+        }
+]
+}
