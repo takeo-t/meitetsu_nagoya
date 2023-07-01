@@ -1,5 +1,5 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Button, Stack } from '@chakra-ui/react'
+import { Button, Stack, Input } from '@chakra-ui/react'
 
 import StationsData from "../../StationsData.json";
 
@@ -16,14 +16,15 @@ interface Station {
 
   export const Home: FC = memo(() => {
     const [inputValue, setInputValue] = useState("");
-    const [stations, setStations] = useState<Station[]>([]);
+    const [allStations, setAllStations] = useState<Station[]>([]);
+    const [searchResults, setSearchResults] = useState<Station[]>([]);
   
     useEffect(() => {
       const newStations = StationsData.StationsData.map(station => ({
         ...station,
         id: parseInt(station.id, 10),
       }));
-      setStations(newStations);
+      setAllStations(newStations);
     }, []);
   
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,24 +33,37 @@ interface Station {
   
     const search = () => {
       if (inputValue === "") {
-        setStations(stations);
+        setSearchResults([]);
         return;
       } else {
-        const searchedStations = stations.filter(
+        const searchedStations = allStations.filter(
           (station) =>
             station.stationName !== undefined &&
             station.stationName !== null &&
             station.stationName.toUpperCase().includes(inputValue.toUpperCase())
         );
-        setStations(searchedStations);
+        setSearchResults(searchedStations);
       }
     };
   return (
     <>
     <Stack spacing={4} direction='row' align='center'>
-    <input type="text" value={inputValue} placeholder="駅名を入力" onChange={handleInputChange}/>
-    <Button colorScheme='teal' size='xs' onClick={() => search}>検索</Button>
+    <Input
+    placeholder="駅名を入力"
+    size='lg'
+    variant='filled'
+    type="text" value={inputValue}
+    onChange={handleInputChange}
+    color="black"
+    my={100}
+    />
+    <Button colorScheme='teal' size='xs' onClick={search} p={6}>検索</Button>
     </Stack>
+    {searchResults.map((station, index) => (
+        <div key={index}>
+            <p>{station.id}</p>
+        </div>
+    ))}
     </>
   );
 });
