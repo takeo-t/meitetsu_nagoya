@@ -3,6 +3,7 @@ import { Stack, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/
 
 // import { ViewStations } from "../molecules/ViewStations";
 import StationsData from "../../StationsData.json";
+import scssShowStations from "./scssShowStations.module.scss";
 
 interface Station {
     id: number;
@@ -123,7 +124,14 @@ export const Home: FC = memo(() => {
                 <p>駅名: {selectedStation.stationName}</p>
                 <p>路線名: {selectedStation.lineName}</p>
                 <p>色: {selectedStation.positionColor}</p>
-                <p>乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)]}</p>
+                乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)].map((item, index) => {
+                    return (
+                        <>
+                         {index === 0 && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
+                         {index === 1 && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
+                        </>
+                    )
+                    })}
             </div>
         }
         </>
