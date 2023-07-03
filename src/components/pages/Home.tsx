@@ -72,20 +72,27 @@ export const Home: FC = memo(() => {
 
     console.log(selectedStation);
     
+
+    interface StationMappingItem {
+        forStations: string;
+        forStationsEn: string;
+        trainClass: string;
+      }
+
     const forStations: string[] = ['岡崎・豊橋','鳴海・豊明','河和.内海.中部国際空港','大江・太田川','一宮・岐阜','須ヶ口・国府宮','津島・弥富','犬山・可児','西春・岩倉'];
     const forStationsEn: string[] = ['Okazaki Toyohashi','Narumi Toyoake','Kowa Utsumi Cen Japan Airport','Oe Otagawa','Ichinomiya Gifu','Sukaguchi Konomiya','Tsushima Yatomi','Inuyama Kani','Nishiharu Iwakura'];
     const trainClass: string[] = ['快特・特急・快急・急行・準急','普通'];
-    const stationMapping: Record<string, string[]> = {
-        '41': [forStations[0],forStationsEn[0],trainClass[0]],
-        '42': [forStations[1],forStationsEn[1],trainClass[1]],
-        '43': [forStations[2],forStationsEn[2],trainClass[0]],
-        '44': [forStations[3],forStationsEn[3],trainClass[0]],
-        '15': [forStations[4],forStationsEn[4],trainClass[0]],
-        '16': [forStations[5],forStationsEn[5],trainClass[1]],
-        '17': [forStations[6],forStationsEn[6],trainClass[0]],
-        '18': [forStations[7],forStationsEn[7],trainClass[0]],
-        '19': [forStations[8],forStationsEn[8],trainClass[0]]
-    };
+        const stationMapping: Record<string, StationMappingItem> = {
+            '41': {forStations: forStations[0], forStationsEn: forStationsEn[0], trainClass: trainClass[0]},
+            '42': {forStations: forStations[1], forStationsEn: forStationsEn[1], trainClass: trainClass[1]},
+            '43': {forStations: forStations[2], forStationsEn: forStationsEn[2], trainClass: trainClass[0]},
+            '44': {forStations: forStations[3], forStationsEn: forStationsEn[3], trainClass: trainClass[0]},
+            '15': {forStations: forStations[4], forStationsEn: forStationsEn[4], trainClass: trainClass[0]},
+            '16': {forStations: forStations[5], forStationsEn: forStationsEn[5], trainClass: trainClass[1]},
+            '17': {forStations: forStations[6], forStationsEn: forStationsEn[6], trainClass: trainClass[0]},
+            '18': {forStations: forStations[7], forStationsEn: forStationsEn[7], trainClass: trainClass[0]},
+            '19': {forStations: forStations[8], forStationsEn: forStationsEn[8], trainClass: trainClass[0]}
+        };
 
     return (
         <>
@@ -124,7 +131,16 @@ export const Home: FC = memo(() => {
                 <p>駅名: {selectedStation.stationName}</p>
                 <p>路線名: {selectedStation.lineName}</p>
                 <p>色: {selectedStation.positionColor}</p>
-                乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)].map((item, index) => {
+                {(() => {
+            const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
+            return (
+                <>
+                    <p className={scssShowStations.stationInfoBlue}>{item.forStations}<br/>{item.forStationsEn}<br/>{item.trainClass}</p>
+                </>
+            );
+        })()}
+                {/* 乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)].map((item:StationMappingItem, index) => {
+                    console.log(item)
                     return (
                         <>
                         {item === "Okazaki Toyohashi" && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
@@ -138,7 +154,7 @@ export const Home: FC = memo(() => {
                         {item === "Nishiharu Iwakura" && <p key={index} className={scssShowStations.stationInfoLightBlue}>{item}</p>}
                         </>
                     )
-                    })}
+                    })} */}
             </div>
         }
         </>
