@@ -127,8 +127,15 @@ export const Home: FC = memo(() => {
                 乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)].map((item, index) => {
                     return (
                         <>
-                         {index === 0 && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
-                         {index === 1 && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
+                        {item === "Okazaki Toyohashi" && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
+                        {item === "Narumi Toyoake" && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
+                        {item === "Kowa Utsumi Cen Japan Airport" && <p key={index} className={scssShowStations.stationInfoGreen}>{item}</p>}
+                        {item === "Oe Otagawa" && <p key={index} className={scssShowStations.stationInfoLightBlue}>{item}</p>}
+                        {item === "Ichinomiya Gifu" && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
+                        {item === "Sukaguchi Konomiya" && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
+                        {item === "Tsushima Yatomi" && <p key={index} className={scssShowStations.stationInfoPurple}>{item}</p>}
+                        {item === "Inuyama Kani" && <p key={index} className={scssShowStations.stationInfoGreen}>{item}</p>}
+                        {item === "Nishiharu Iwakura" && <p key={index} className={scssShowStations.stationInfoLightBlue}>{item}</p>}
                         </>
                     )
                     })}
