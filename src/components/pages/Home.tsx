@@ -135,7 +135,10 @@ export const Home: FC = memo(() => {
             const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
             return (
                 <>
-                    <p className={scssShowStations.stationInfoBlue}>{item.forStations}<br/>{item.forStationsEn}<br/>{item.trainClass}</p>
+                <div className={scssShowStations.stationInfoBlue}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>
                 </>
             );
         })()}
