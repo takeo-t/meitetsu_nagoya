@@ -1,5 +1,5 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Stack, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
+import { Stack, Input, InputGroup, Button, Box, HStack } from '@chakra-ui/react'
 
 // import { ViewStations } from "../molecules/ViewStations";
 import StationsData from "../../StationsData.json";
@@ -69,10 +69,7 @@ export const Home: FC = memo(() => {
         setSearchResults([]);
         setSelectedStation(null);
       };
-
-    console.log(selectedStation);
     
-
     interface StationMappingItem {
         forStations: string;
         forStationsEn: string;
@@ -96,28 +93,40 @@ export const Home: FC = memo(() => {
 
     return (
         <>
-        <Stack spacing={4} direction='row' align='center'>
-        <InputGroup>
+        <Stack spacing={4} direction='column' align='center'>
+
+        <Box w="60%">
+        <Input
+         placeholder="名鉄名古屋駅"
+         size='md'
+         variant='filled'
+         type="text"
+        mt={100}
+        isDisabled
+          />
+        </Box>
+
+
+        <HStack spacing={4} w="80%">
+        <Box flex="1">
         <Input
          placeholder="駅名を入力"
-         size='lg'
+         size='md'
          variant='filled'
          type="text"
          value={inputValue}
          onChange={handleInputChange}
         color="black"
-        my={100}
+        my={20}
           _focus={{
            borderColor: 'teal.500',
            boxShadow: '0 0 0 3px teal.500',
            bg: 'gray.100'
          }}
           />
-
-            <InputRightElement width="4.5rem">
-                <Button size="sm" onClick={handleClearInput}>クリア</Button>
-            </InputRightElement>
-          </InputGroup>
+          </Box>
+          <Button size="sm" onClick={handleClearInput}>クリア</Button>
+          </HStack>
         </Stack>
         {searchResults.length >= 2 && !selectedStation && <p>候補の駅を表示します</p>}
         {!selectedStation && searchResults.map((station, index) => (
@@ -135,29 +144,54 @@ export const Home: FC = memo(() => {
             const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
             return (
                 <>
+                {item.forStationsEn === "Okazaki Toyohashi" &&
                 <div className={scssShowStations.stationInfoBlue}>
                     <p style={{fontSize: "30px"}}>{item.forStations}</p>
                     <p>{item.forStationsEn}<br />{item.trainClass}</p>
-                    </div>
+                    </div>}
+                {item.forStationsEn === "Narumi Toyoake" &&
+                <div className={scssShowStations.stationInfoYellow}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Kowa Utsumi Cen Japan Airport" &&
+                <div className={scssShowStations.stationInfoGreen}>
+                    <p style={{fontSize: "25px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Oe Otagawa" &&
+                <div className={scssShowStations.stationInfoLightBlue}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Ichinomiya Gifu" &&
+                <div className={scssShowStations.stationInfoBlue}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Sukaguchi Konomiya" &&
+                <div className={scssShowStations.stationInfoYellow}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Tsushima Yatomi" &&
+                <div className={scssShowStations.stationInfoPurple}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Inuyama Kani" &&
+                <div className={scssShowStations.stationInfoGreen}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
+                {item.forStationsEn === "Nishiharu Iwakura" &&
+                <div className={scssShowStations.stationInfoLightBlue}>
+                    <p style={{fontSize: "30px"}}>{item.forStations}</p>
+                    <p>{item.forStationsEn}<br />{item.trainClass}</p>
+                    </div>}
                 </>
             );
         })()}
-                {/* 乗車位置: {stationMapping[selectedStation.id.toString().substring(0, 2)].map((item:StationMappingItem, index) => {
-                    console.log(item)
-                    return (
-                        <>
-                        {item === "Okazaki Toyohashi" && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
-                        {item === "Narumi Toyoake" && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
-                        {item === "Kowa Utsumi Cen Japan Airport" && <p key={index} className={scssShowStations.stationInfoGreen}>{item}</p>}
-                        {item === "Oe Otagawa" && <p key={index} className={scssShowStations.stationInfoLightBlue}>{item}</p>}
-                        {item === "Ichinomiya Gifu" && <p key={index} className={scssShowStations.stationInfoBlue}>{item}</p>}
-                        {item === "Sukaguchi Konomiya" && <p key={index} className={scssShowStations.stationInfoYellow}>{item}</p>}
-                        {item === "Tsushima Yatomi" && <p key={index} className={scssShowStations.stationInfoPurple}>{item}</p>}
-                        {item === "Inuyama Kani" && <p key={index} className={scssShowStations.stationInfoGreen}>{item}</p>}
-                        {item === "Nishiharu Iwakura" && <p key={index} className={scssShowStations.stationInfoLightBlue}>{item}</p>}
-                        </>
-                    )
-                    })} */}
             </div>
         }
         </>
