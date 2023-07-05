@@ -93,22 +93,24 @@ export const Home: FC = memo(() => {
 
     return (
         <>
+        <Box display="flex" justifyContent="center" alignItems="center">
+        <h1>降りる駅を入力してください。</h1>
+        <h2>※対応する駅は名鉄線のみです</h2>
+        </Box>
         <Stack spacing={4} direction='column' align='center'>
-
-        <Box w="60%">
+        <Box w="80%" mt={10}>
+        <p>発駅</p>
         <Input
          placeholder="名鉄名古屋駅"
          size='md'
          variant='filled'
          type="text"
-        mt={100}
         isDisabled
           />
         </Box>
-
-
-        <HStack spacing={4} w="80%">
-        <Box flex="1">
+        <p>↓</p>
+        <Box w="80%">
+        <p>着駅</p>
         <Input
          placeholder="駅名を入力"
          size='md'
@@ -117,7 +119,8 @@ export const Home: FC = memo(() => {
          value={inputValue}
          onChange={handleInputChange}
         color="black"
-        my={20}
+        mr={20}
+        mb={20}
           _focus={{
            borderColor: 'teal.500',
            boxShadow: '0 0 0 3px teal.500',
@@ -125,21 +128,24 @@ export const Home: FC = memo(() => {
          }}
           />
           </Box>
-          <Button size="sm" onClick={handleClearInput}>クリア</Button>
-          </HStack>
         </Stack>
+        <Box display="flex" justifyContent="center" alignItems="center">
+        <Box>
+         <Box mb={5}>
         {searchResults.length >= 2 && !selectedStation && <p>候補の駅を表示します</p>}
+        </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
-                <p>{station.stationName}駅</p>
+                <p>・{station.stationName}駅</p>
             </div>
         ))}
+        </Box>
         {selectedStation &&
             <div>
-                <h2>検索結果</h2>
+                <Box mb={5}>検索結果</Box>
                 <p>駅名: {selectedStation.stationName}</p>
                 <p>路線名: {selectedStation.lineName}</p>
-                <p>色: {selectedStation.positionColor}</p>
+                <Box mt={5}>下記表示の{selectedStation.positionColor}色乗車位置に並んでください。</Box>
                 {(() => {
             const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
             return (
@@ -189,11 +195,15 @@ export const Home: FC = memo(() => {
                     <p style={{fontSize: "30px"}}>{item.forStations}</p>
                     <p>{item.forStationsEn}<br />{item.trainClass}</p>
                     </div>}
+                    <Box display="flex" justifyContent="center" alignItems="center">
+                    <Button size="sm" onClick={handleClearInput}>検索結果をクリア</Button>
+                    </Box>
                 </>
             );
         })()}
             </div>
         }
+        </Box>
         </>
     );
 });
