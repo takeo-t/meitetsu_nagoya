@@ -1,25 +1,16 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Stack, Input, InputGroup, Button, Box, HStack } from '@chakra-ui/react'
+import { Stack, Input, Button, Box, HStack } from '@chakra-ui/react'
 
 // import { ViewStations } from "../molecules/ViewStations";
 import StationsData from "../../StationsData.json";
 import scssShowStations from "./scssShowStations.module.scss";
-
-interface Station {
-    id: number;
-    lineName: string;
-    stationNum: string;
-    stationName: string;
-    trackNum: string;
-    position: string;
-    positionColor: string;
-    color: string;
-}
+import { SearchInput } from "../../components/organisms/SearchInput";
+import { Station } from "../../type";
 
 export const Home: FC = memo(() => {
-    const [inputValue, setInputValue] = useState("");
-    const [allStations, setAllStations] = useState<Station[]>([]);
-    const [searchResults, setSearchResults] = useState<Station[]>([]);
+    const [inputValue, setInputValue] = useState("");//初期値は空
+    const [allStations, setAllStations] = useState<Station[]>([]);//初期値はから配列
+    const [searchResults, setSearchResults] = useState<Station[]>([]);//初期値は空配列
     const [selectedStation, setSelectedStation] = useState<Station | null>(null);
 
     useEffect(() => {
@@ -28,7 +19,7 @@ export const Home: FC = memo(() => {
             id: parseInt(station.id, 10),
         }));
         setAllStations(newStations)
-    }, []);
+    }, []);//全ての駅データを変数newStationsに格納する
   
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
@@ -48,6 +39,7 @@ export const Home: FC = memo(() => {
                 station.stationName.toUpperCase().includes(input.toUpperCase())
             );
             setSearchResults(searchedStations);
+            // console.log(searchResults);
             if (searchedStations.length === 1) {
                 setSelectedStation(searchedStations[0]);
             } else {
@@ -62,6 +54,7 @@ export const Home: FC = memo(() => {
         } else {
             setSelectedStation(station);
         }
+        console.log(selectedStation);
     };
 
     const handleClearInput = () => {
@@ -98,36 +91,7 @@ export const Home: FC = memo(() => {
         <h2>※対応する駅は名鉄線のみです</h2>
         </Box>
         <Stack spacing={4} direction='column' align='center'>
-        <Box w="80%" mt={10}>
-        <p>発駅</p>
-        <Input
-         placeholder="名鉄名古屋駅"
-         size='md'
-         variant='filled'
-         type="text"
-        isDisabled
-          />
-        </Box>
-        <p>↓</p>
-        <Box w="80%">
-        <p>着駅</p>
-        <Input
-         placeholder="駅名を入力"
-         size='md'
-         variant='filled'
-         type="text"
-         value={inputValue}
-         onChange={handleInputChange}
-        color="black"
-        mr={20}
-        mb={20}
-          _focus={{
-           borderColor: 'teal.500',
-           boxShadow: '0 0 0 3px teal.500',
-           bg: 'gray.100'
-         }}
-          />
-          </Box>
+        <SearchInput value={inputValue} onChange={handleInputChange}/>
         </Stack>
         <Box display="flex" justifyContent="center" alignItems="center">
         <Box>

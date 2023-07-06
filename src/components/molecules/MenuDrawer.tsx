@@ -23,5 +23,3 @@ export const MenuDrawer: FC<Props> = memo((props) => {
         </Drawer>
     )
 });
-
-export{}
