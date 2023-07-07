@@ -8,3 +8,9 @@ export interface Station {
     positionColor: string;
     color: string;
 }
+
+export interface StationMappingItem {
+    forStations: string;
+    forStationsEn: string;
+    trainClass: string;
+}

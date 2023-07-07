@@ -1,11 +1,12 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Stack, Input, Button, Box, HStack } from '@chakra-ui/react'
+import { Stack, Button, Box, } from '@chakra-ui/react'
 
-// import { ViewStations } from "../molecules/ViewStations";
 import StationsData from "../../StationsData.json";
 import scssShowStations from "./scssShowStations.module.scss";
 import { SearchInput } from "../../components/organisms/SearchInput";
+import { SearchResults } from "../organisms/SearchResult";
 import { Station } from "../../type";
+import { StationMappingItem } from "../../type";
 
 export const Home: FC = memo(() => {
     const [inputValue, setInputValue] = useState("");//初期値は空
@@ -62,12 +63,6 @@ export const Home: FC = memo(() => {
         setSearchResults([]);
         setSelectedStation(null);
       };
-    
-    interface StationMappingItem {
-        forStations: string;
-        forStationsEn: string;
-        trainClass: string;
-      }
 
     const forStations: string[] = ['岡崎・豊橋','鳴海・豊明','河和.内海.中部国際空港','大江・太田川','一宮・岐阜','須ヶ口・国府宮','津島・弥富','犬山・可児','西春・岩倉'];
     const forStationsEn: string[] = ['Okazaki Toyohashi','Narumi Toyoake','Kowa Utsumi Cen Japan Airport','Oe Otagawa','Ichinomiya Gifu','Sukaguchi Konomiya','Tsushima Yatomi','Inuyama Kani','Nishiharu Iwakura'];
@@ -104,6 +99,7 @@ export const Home: FC = memo(() => {
             </div>
         ))}
         </Box>
+        <SearchResults selectedStation={selectedStation} stationMapping={stationMapping}/>
         {selectedStation &&
             <div>
                 <Box mb={5}>検索結果</Box>
