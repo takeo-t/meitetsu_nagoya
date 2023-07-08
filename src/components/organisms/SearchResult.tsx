@@ -9,12 +9,13 @@ import { StationMappingItem } from "../../type";
 interface SearchResultsProps {
     searchResults: Station[];
     selectedStation: Station | null;
-    stationMapping: StationMappingItem;
+    stationMapping: Record<string, StationMappingItem>;
     onClick: () => void;
 }
 
-export const SearchResults: FC<SearchResultsProps> = ({selectedStation, stationMapping}) => {
-{selectedStation &&
+export const SearchResults: FC<SearchResultsProps> = ({selectedStation, stationMapping,onClick}) => {
+return (
+selectedStation &&
     <div>
         <Box mb={5}>検索結果</Box>
         <p>駅名: {selectedStation.stationName}</p>
@@ -70,11 +71,11 @@ export const SearchResults: FC<SearchResultsProps> = ({selectedStation, stationM
             <p>{item.forStationsEn}<br />{item.trainClass}</p>
             </div>}
             <Box display="flex" justifyContent="center" alignItems="center">
-            <Button size="sm" onClick={handleClearInput}>検索結果をクリア</Button>
+            <Button size="sm" onClick={onClick}>検索結果をクリア</Button>
             </Box>
         </>
     );
 })()}
     </div>
-}
+);
 }
