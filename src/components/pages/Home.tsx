@@ -1,8 +1,7 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Stack, Button, Box, } from '@chakra-ui/react'
+import { Stack, Box, Button, } from '@chakra-ui/react'
 
 import StationsData from "../../StationsData.json";
-import scssShowStations from "./scssShowStations.module.scss";
 import { SearchInput } from "../../components/organisms/SearchInput";
 import { SearchResults } from "../organisms/SearchResult";
 import { Station } from "../../type";
@@ -13,6 +12,7 @@ export const Home: FC = memo(() => {
     const [allStations, setAllStations] = useState<Station[]>([]);//初期値はから配列
     const [searchResults, setSearchResults] = useState<Station[]>([]);//初期値は空配列
     const [selectedStation, setSelectedStation] = useState<Station | null>(null);
+    const [noResults, setNoResults] = useState(false)
 
     useEffect(() => {
         const newStations = StationsData.StationsData.map(station => ({
@@ -24,13 +24,18 @@ export const Home: FC = memo(() => {
   
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
-        search(event.target.value);
+        // search(event.target.value);
     };
+
+    const handleSearch = () => {
+        search(inputValue)
+    }
   
     const search = (input: string) => {
         if (input === "") {
             setSearchResults([]);
             setSelectedStation(null);
+            setNoResults(false);
             return;
         } else {
             const searchedStations = allStations.filter(
@@ -40,13 +45,16 @@ export const Home: FC = memo(() => {
                 station.stationName.toUpperCase().includes(input.toUpperCase())
             );
             setSearchResults(searchedStations);
-            // console.log(searchResults);
+            if (searchedStations.length === 0) {
+                setNoResults(true);
+            } else {
             if (searchedStations.length === 1) {
                 setSelectedStation(searchedStations[0]);
             } else {
                 setSelectedStation(null);
             }
         }
+    }
     };
   
     const handleClick = (station: Station) => {
@@ -55,7 +63,6 @@ export const Home: FC = memo(() => {
         } else {
             setSelectedStation(station);
         }
-        console.log(selectedStation);
     };
 
     const handleClearInput = () => {
@@ -91,6 +98,7 @@ export const Home: FC = memo(() => {
         <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
          <Box mb={5}>
+        {noResults && <p>該当する駅が見つかりませんでした。</p>}
         {searchResults.length >= 2 && !selectedStation && <p>候補の駅を表示します</p>}
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
@@ -100,6 +108,7 @@ export const Home: FC = memo(() => {
         ))}
         </Box>
         <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput}/>
+        <Button onClick={handleSearch}>検索</Button>
         </Box>
         </>
     );
