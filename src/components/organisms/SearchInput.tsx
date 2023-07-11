@@ -23,7 +23,7 @@ export const SearchInput: FC<SearchInputProps> = ({ value, onChange }) => {
         <Box w="80%">
         <p>着駅</p>
         <Input
-         placeholder="駅名を入力"
+         placeholder="降りる駅を入力"
          size='md'
          variant='filled'
          type="text"

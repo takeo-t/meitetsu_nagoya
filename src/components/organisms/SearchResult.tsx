@@ -71,6 +71,9 @@ selectedStation &&
             <p>{item.forStationsEn}<br />{item.trainClass}</p>
             </div>}
             <Box display="flex" justifyContent="center" alignItems="center">
+            <Button size="sm">よく降りる駅に登録</Button>
+            </Box>
+            <Box m={5} display="flex" justifyContent="center" alignItems="center">
             <Button size="sm" onClick={onClick}>検索結果をクリア</Button>
             </Box>
         </>

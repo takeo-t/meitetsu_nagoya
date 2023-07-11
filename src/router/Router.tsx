@@ -5,7 +5,9 @@ import { Login } from "../components/pages/Login";
 import { Home } from "../components/pages/Home";
 import { Page404 } from "../components/pages/Page404";
 import { HeaderLayout } from "../components/templates/HeaderLayout";
+import { Favorite } from "../components/pages/Favorite";
 import { Setting } from "../components/pages/Setting";
+
 
 
 export const Router: FC = memo(() => {
@@ -15,6 +17,7 @@ export const Router: FC = memo(() => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Login" element={<Login />} />
+                <Route path="/Favorite" element={<Favorite/>} />
                 <Route path="/Setting" element={<Setting />} />
                 <Route path="*" element={<Page404 />} />
             </Routes>

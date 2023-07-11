@@ -11,6 +11,7 @@ export const Header: FC = memo(() => {
     const navigate = useNavigate();
 
     const onClickHome = useCallback(() => navigate('/'),[navigate]);
+    const onClickFavorite = useCallback(() => navigate('/favorite'),[navigate]);
     const onClickSetting = useCallback(() => navigate('/setting'),[navigate]);
 
     return (
@@ -33,11 +34,17 @@ export const Header: FC = memo(() => {
         fontSize="sm"
         flexGrow={2}
         display={{ base: "none", md: "flex" }}>
-            <Link onClick={onClickSetting}>設定</Link>
+            <Link mr={4} onClick={onClickFavorite}>よく降りる駅</Link>
+            <Link mr={4} onClick={onClickSetting}>設定</Link>
         </Flex>
         <MenuIconButton onOpen={onOpen}/>
         </Flex>
-        <MenuDrawer onClickHome={onClickHome} onClickSetting={onClickSetting} onClose={onClose} isOpen={isOpen} />
+        <MenuDrawer
+        onClickHome={onClickHome}
+        onClickFavorite={onClickFavorite}
+        onClickSetting={onClickSetting}
+        onClose={onClose}
+        isOpen={isOpen} />
         </>
     );
 });
