@@ -24,7 +24,7 @@ export const Home: FC = memo(() => {
   
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
-        // search(event.target.value);
+        setNoResults(false)
     };
 
     const handleSearch = () => {
@@ -96,10 +96,13 @@ export const Home: FC = memo(() => {
         <SearchInput value={inputValue} onChange={handleInputChange}/>
         </Stack>
         <Box display="flex" justifyContent="center" alignItems="center">
+        <Button onClick={handleSearch}>検索</Button>
+        </Box>
+        <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
          <Box mb={5}>
         {noResults && <p>該当する駅が見つかりませんでした。</p>}
-        {searchResults.length >= 2 && !selectedStation && <p>候補の駅を表示します</p>}
+        {searchResults.length >= 1 && !selectedStation && <p>候補の駅を表示します</p>}
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
@@ -108,7 +111,6 @@ export const Home: FC = memo(() => {
         ))}
         </Box>
         <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput}/>
-        <Button onClick={handleSearch}>検索</Button>
         </Box>
         </>
     );
