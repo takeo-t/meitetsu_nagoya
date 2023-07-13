@@ -96,7 +96,7 @@ export const Home: FC = memo(() => {
         <SearchInput value={inputValue} onChange={handleInputChange}/>
         </Stack>
         <Box display="flex" justifyContent="center" alignItems="center">
-        <Button onClick={handleSearch}>検索</Button>
+        <Button py={3} onClick={handleSearch}>検索</Button>
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
