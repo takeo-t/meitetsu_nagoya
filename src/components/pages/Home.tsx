@@ -89,7 +89,7 @@ export const Home: FC = memo(() => {
     return (
         <>
         <Box display="flex" justifyContent="center" alignItems="center">
-        <h1>降りる駅を入力してください。</h1>
+        <h1>降りる駅または最初に乗換えする駅を入力してください。</h1>
         <h2>※対応する駅は名鉄線のみです</h2>
         </Box>
         <Stack spacing={4} direction='column' align='center'>
@@ -102,11 +102,13 @@ export const Home: FC = memo(() => {
         <Box>
          <Box mb={5}>
         {noResults && <p>該当する駅が見つかりませんでした。</p>}
+        <Box m={5}>
         {searchResults.length >= 1 && !selectedStation && <p>候補の駅を表示します</p>}
+        </Box>
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
-                <p>・{station.stationName}駅</p>
+                <Button colorScheme='white' m={2} variant='link'>・{station.stationName}駅</Button>
             </div>
         ))}
         </Box>
