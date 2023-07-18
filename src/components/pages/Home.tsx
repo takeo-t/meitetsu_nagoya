@@ -1,7 +1,7 @@
 import { memo, FC, useState, useEffect } from "react";
 import { Stack, Box, Button, } from '@chakra-ui/react'
+import axios from 'axios';
 
-import StationsData from "../../StationsData.json";
 import { SearchInput } from "../../components/organisms/SearchInput";
 import { SearchResults } from "../organisms/SearchResult";
 import { Station } from "../../type";
@@ -16,13 +16,16 @@ export const Home: FC = memo(() => {
     const [noResults, setNoResults] = useState(false)
 
     useEffect(() => {
-        const newStations = StationsData.StationsData.map(station => ({
-            ...station,
-            id: parseInt(station.id, 10),
-        }));
-        setAllStations(newStations)
-    }, []);//全ての駅データを変数newStationsに格納する
-  
+        axios.get("http://localhost:3000/api/v1/stations")
+        .then(responce => {
+            setAllStations(responce.data.data);
+        })
+        .catch(error => {
+            console.log(error);
+            alert('読み込みに失敗しました。')
+        });
+      }, []);
+
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
         setNoResults(false)
