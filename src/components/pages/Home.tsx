@@ -7,6 +7,7 @@ import { SearchResults } from "../organisms/SearchResult";
 import { Station } from "../../type";
 import { StationMappingItem } from "../../type";
 
+
 export const Home: FC = memo(() => {
     const [inputValue, setInputValue] = useState("");//初期値は空
     const [allStations, setAllStations] = useState<Station[]>([]);//初期値はから配列
