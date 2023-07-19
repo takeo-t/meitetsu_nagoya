@@ -9,11 +9,12 @@ import { StationMappingItem } from "../../type";
 
 
 export const Home: FC = memo(() => {
-    const [inputValue, setInputValue] = useState("");//初期値は空
-    const [allStations, setAllStations] = useState<Station[]>([]);//初期値はから配列
-    const [searchResults, setSearchResults] = useState<Station[]>([]);//初期値は空配列
+    const [inputValue, setInputValue] = useState("");
+    const [allStations, setAllStations] = useState<Station[]>([]);
+    const [searchResults, setSearchResults] = useState<Station[]>([]);
     const [selectedStation, setSelectedStation] = useState<Station | null>(null);
     const [noResults, setNoResults] = useState(false)
+    const [favorite, setFavorite] = useState<Station[]>([]);
 
     useEffect(() => {
         axios.get("http://localhost:3000/api/v1/stations")
