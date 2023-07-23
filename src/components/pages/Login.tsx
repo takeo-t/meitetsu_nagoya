@@ -6,10 +6,34 @@ export const Login: FC = memo(() => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    console.log(`Email: ${email}, Password: ${password}`);
-    // ここでログインのロジックを書く
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+          credentials: 'include',
+        });
+      
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data);  // レスポンスの内容をログに出力
+          alert("ログイン成功");
+        } else {
+          const errorData = await response.json();
+          console.error(errorData);  // エラーレスポンスの内容をログに出力
+          alert("ログイン失敗");
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+        alert("An error occurred. Please try again.");
+      }
   };
 
   return (
@@ -31,5 +55,3 @@ export const Login: FC = memo(() => {
   );
 }
 );
-
-export{}
