@@ -1,43 +1,33 @@
 import { useState } from "react";
 import { memo, FC } from "react";
+import { useNavigate } from 'react-router-dom';
+import useAuth from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 
-export const Login: FC = memo(() => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    try {
-        const response = await fetch('http://localhost:3000/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: email,
-            password: password,
-          }),
-          credentials: 'include',
-        });
-      
-        if (response.ok) {
-          const data = await response.json();
-          console.log(data);  // レスポンスの内容をログに出力
-          alert("ログイン成功");
-        } else {
-          const errorData = await response.json();
-          console.error(errorData);  // エラーレスポンスの内容をログに出力
-          alert("ログイン失敗");
+export const Login: FC = memo(() => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const { login, logout } = useAuth();
+    const navigate = useNavigate();
+
+
+    const handleLogin = async (event: React.FormEvent) => {
+        event.preventDefault();
+        const result = await login(email, password);
+        console.log('Login result: ', result);
+        if(result) {
+            navigate('/');
         }
-      } catch (error) {
-        console.error("An error occurred:", error);
-        alert("An error occurred. Please try again.");
-      }
-  };
+    }
+    
+    const handleLogout = async () => {
+        const result = await logout();
+        console.log('Logout result: ', result);
+    };
 
   return (
-    <Box as="form" p={5} shadow="md" borderWidth="1px" onSubmit={handleSubmit}>
+    <Box as="form" p={5} shadow="md" borderWidth="1px" onSubmit={handleLogin}>
       <FormControl id="email" isRequired>
         <FormLabel>Email address</FormLabel>
         <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -50,6 +40,9 @@ export const Login: FC = memo(() => {
 
       <Button colorScheme="blue" type="submit" width="full" mt={4}>
         Sign In
+      </Button>
+      <Button colorScheme="red" width="full" mt={4} onClick={handleLogout}>
+        Log Out
       </Button>
     </Box>
   );

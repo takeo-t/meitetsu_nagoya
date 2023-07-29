@@ -8,24 +8,23 @@ import { Page404 } from "../components/pages/Page404";
 import { HeaderLayout } from "../components/templates/HeaderLayout";
 import { Favorite } from "../components/pages/Favorite";
 import { Setting } from "../components/pages/Setting";
+import { PrivateRoute } from "./PrivateRoute";
 
 
 
 export const Router: FC = memo(() => {
-    return (
-        <BrowserRouter>
-          <HeaderLayout>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Login" element={<Login />} />
-                <Route path="/Register" element={<Register />} />
-                <Route path="/Favorite" element={<Favorite/>} />
-                <Route path="/Setting" element={<Setting />} />
-                <Route path="*" element={<Page404 />} />
-            </Routes>
-          </HeaderLayout>
-        </BrowserRouter>
-    )
-})
-
-export{}
+  return (
+    <BrowserRouter>
+      <HeaderLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Favorite" element={<PrivateRoute><Favorite/></PrivateRoute>} />
+          <Route path="/Setting" element={<PrivateRoute><Setting /></PrivateRoute>} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </HeaderLayout>
+    </BrowserRouter>
+  );
+});

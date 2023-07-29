@@ -9,19 +9,17 @@ export const Register: FC = memo(() => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("handleSubmit was called"); 
+    console.log("handleSubmit was called");
     try {
-        const response = await fetch('http://localhost:3000/users', {
+        const response = await fetch('http://localhost:3000/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            user: {
               email: email,
               password: password,
               password_confirmation: passwordConfirmation,
-            },
           }),
           credentials: 'include',
         });
