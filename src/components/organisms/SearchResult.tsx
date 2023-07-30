@@ -21,10 +21,10 @@ export const SearchResults: FC<SearchResultsProps> = ({
 }) => {
 
     const { userId, accessToken, client, uid } = useAuth();
-    const handleAddFavoriteStation = useCallback(async () => {
-      if (!userId || !selectedStation) return;
-      await addFavoriteStation(userId, selectedStation.id.toString(), { accessToken, client, uid });
-    }, [userId, selectedStation, accessToken, client, uid]);
+   const handleAddFavoriteStation = useCallback(async () => {
+  if (!userId || !selectedStation || !accessToken || !client || !uid) return;
+  await addFavoriteStation(userId, selectedStation.id.toString(), { accessToken, client, uid });
+}, [userId, selectedStation, accessToken, client, uid]);
 return (
 selectedStation &&
     <div>
