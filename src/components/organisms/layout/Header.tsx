@@ -1,9 +1,10 @@
-import { memo, FC, useCallback } from 'react';
-import { Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
+import { memo, FC, useCallback, useContext } from 'react';
+import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 import { MenuIconButton } from '../../atoms/button/MenuIconButton';
 import { MenuDrawer } from '../../molecules/MenuDrawer';
+import { AuthContext } from '../../../contexts/AuthContext';
 
 
 export const Header: FC = memo(() => {
@@ -16,9 +17,13 @@ export const Header: FC = memo(() => {
     const onClickLogin = useCallback(() => navigate('/login'),[navigate]);
     const onClickRegister = useCallback(() => navigate('/register'),[navigate]);
 
+    const { userEmail } = useContext(AuthContext);
+    console.log(userEmail);
+
 
     return (
         <>
+        <Box>{userEmail}</Box>
         <Flex
         as="nav"
         bg="teal.100"

@@ -20,11 +20,17 @@ export const SearchResults: FC<SearchResultsProps> = ({
     onClick
 }) => {
 
-    const { userId, accessToken, client, uid } = useAuth();
+   const { userId, accessToken, client, uid } = useAuth();
+
    const handleAddFavoriteStation = useCallback(async () => {
+    try {
   if (!userId || !selectedStation || !accessToken || !client || !uid) return;
   await addFavoriteStation(userId, selectedStation.id.toString(), { accessToken, client, uid });
+    } catch (error) {
+        console.error('Failed to add favorite station:', error);
+    }
 }, [userId, selectedStation, accessToken, client, uid]);
+
 return (
 selectedStation &&
     <div>

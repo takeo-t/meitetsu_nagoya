@@ -1,6 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
+
+interface ApiResponse {
+    data: {
+        id: number;
+        email: string;
+    }
+}
+
 const useAuth = () => {
     const { accessToken, client, uid, userId, setAuthData, clearAuthData } = useContext(AuthContext);
 
@@ -18,15 +26,16 @@ const useAuth = () => {
         });
 
         if (response.ok) {
-            const data = await response.json();
-            // Log the data to the console
+            const data = await response.json() as ApiResponse;
             console.log(data);
             const accessToken = response.headers.get('access-token') || '';
             const client = response.headers.get('client') || '';
             const uid = response.headers.get('uid') || '';
             const userId = data.data.id;
 
-            setAuthData(accessToken, client, uid, userId);
+            setAuthData(accessToken, client, uid, data.data.email, userId);
+
+
             return true;
         } else {
             clearAuthData();
