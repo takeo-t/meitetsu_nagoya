@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { memo, FC } from "react";
+import { memo, FC, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import useAuth from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
@@ -8,7 +8,7 @@ import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 export const Login: FC = memo(() => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { login, logout } = useAuth();
+    const { login, logout, accessToken, client, uid } = useAuth();
     const navigate = useNavigate();
 
 
@@ -25,6 +25,13 @@ export const Login: FC = memo(() => {
         const result = await logout();
         console.log('Logout result: ', result);
     };
+
+
+    useEffect(() => {
+        console.log('accessToken: ', accessToken);
+        console.log('client: ', client);
+        console.log('uid: ', uid);
+    }, [accessToken, client, uid]);
 
   return (
     <Box as="form" p={5} shadow="md" borderWidth="1px" onSubmit={handleLogin}>

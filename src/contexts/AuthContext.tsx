@@ -21,11 +21,6 @@ export const AuthContext = createContext<AuthContextProps>({
 });
 
 export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
-    // const [accessToken, setAccessToken] = useState<string | null>(null);
-    // const [client, setClient] = useState<string | null>(null);
-    // const [uid, setUid] = useState<string | null>(null);
-    // const [userEmail, setUserEmail] = useState<string | null>(null);
-    // const [userId, setUserId] = useState<number | null>(null);
 
     const [accessToken, setAccessToken] = useState<string | null>(localStorage.getItem('accessToken'));
     const [client, setClient] = useState<string | null>(localStorage.getItem('client'));
@@ -34,6 +29,7 @@ export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     const [userId, setUserId] = useState<number | null>(localStorage.getItem('userId') ? Number(localStorage.getItem('userId')) : null);
 
     const setAuthData = (accessToken: string, client: string, uid: string, userEmail: string, userId: number) => {
+    console.log('Setting auth data:', { accessToken, client, uid, userEmail, userId });
     setAccessToken(accessToken);
     setClient(client);
     setUid(uid);

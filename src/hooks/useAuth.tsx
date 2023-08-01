@@ -27,14 +27,14 @@ const useAuth = () => {
 
         if (response.ok) {
             const data = await response.json() as ApiResponse;
-            console.log(data);
+            console.log('Response Headers:', Array.from(response.headers.entries()));
             const accessToken = response.headers.get('access-token') || '';
             const client = response.headers.get('client') || '';
             const uid = response.headers.get('uid') || '';
             const userId = data.data.id;
 
             setAuthData(accessToken, client, uid, data.data.email, userId);
-
+            console.log('After setAuthData - accessToken:', accessToken, ', client:', client, ', uid:', uid);
 
             return true;
         } else {
