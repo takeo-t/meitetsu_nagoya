@@ -1,26 +1,40 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { memo, FC, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import useAuth from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { AuthContext } from "../../contexts/AuthContext";
+
 
 
 export const Login: FC = memo(() => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { login, logout, accessToken, client, uid } = useAuth();
+    const { setAuthData } = useContext(AuthContext);
     const navigate = useNavigate();
 
 
     const handleLogin = async (event: React.FormEvent) => {
         event.preventDefault();
-        const result = await login(email, password);
-        console.log('Login result: ', result);
-        if(result) {
-            navigate('/');
+        const response = await login(email, password);
+        console.log('Login result: ', response);
+    
+        if (response) {
+            const accessToken = response.headers.get('access-token');
+            const client = response.headers.get('client');
+            const uid = response.headers.get('uid');
+            const data = await response.json();
+            const userEmail = data.data.email;
+            const userId = data.data.id;
+    
+            if (accessToken && client && uid) {
+                setAuthData(accessToken, client, uid, userEmail, userId);
+                navigate('/');
+            }
         }
     }
-    
+
     const handleLogout = async () => {
         const result = await logout();
         console.log('Logout result: ', result);

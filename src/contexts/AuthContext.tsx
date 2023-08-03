@@ -19,12 +19,13 @@ export const AuthContext = createContext<AuthContextProps>({
     setAuthData: () => {},
     clearAuthData: () => {},
 });
+console.log(AuthContext);
 
 export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 
-    const [accessToken, setAccessToken] = useState<string | null>(localStorage.getItem('accessToken'));
-    const [client, setClient] = useState<string | null>(localStorage.getItem('client'));
-    const [uid, setUid] = useState<string | null>(localStorage.getItem('uid'));
+    const [accessToken, setAccessToken] = useState<string | null>(localStorage.getItem('AccessToken'));
+    const [client, setClient] = useState<string | null>(localStorage.getItem('Client'));
+    const [uid, setUid] = useState<string | null>(localStorage.getItem('Uid'));
     const [userEmail, setUserEmail] = useState<string | null>(localStorage.getItem('userEmail'));
     const [userId, setUserId] = useState<number | null>(localStorage.getItem('userId') ? Number(localStorage.getItem('userId')) : null);
 
@@ -38,9 +39,9 @@ export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     };
 
     useEffect(() => {
-        if(accessToken) localStorage.setItem('accessToken', accessToken);
-        if(client) localStorage.setItem('client', client);
-        if(uid) localStorage.setItem('uid', uid);
+        if(accessToken) localStorage.setItem('AccessToken', accessToken);
+        if(client) localStorage.setItem('Client', client);
+        if(uid) localStorage.setItem('Uid', uid);
         if(userEmail) localStorage.setItem('userEmail', userEmail);
         if(userId) localStorage.setItem('userId', userId.toString());
     }, [accessToken, client, uid, userEmail, userId]);
@@ -53,9 +54,9 @@ export const AuthProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
         setUserEmail(null);
         setUserId(null);
 
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('client');
-        localStorage.removeItem('uid');
+        localStorage.removeItem('AccessToken');
+        localStorage.removeItem('Client');
+        localStorage.removeItem('Uid');
         localStorage.removeItem('userEmail');
         localStorage.removeItem('userId');
     };

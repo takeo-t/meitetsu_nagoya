@@ -1,64 +1,66 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
-
-interface ApiResponse {
-    data: {
-        id: number;
-        email: string;
-    }
-}
+// interface ApiResponse {
+//     data: {
+//         id: number;
+//         email: string;
+//     }
+// }
 
 const useAuth = () => {
-    const { accessToken, client, uid, userId, setAuthData, clearAuthData } = useContext(AuthContext);
+    const { accessToken, client, uid, userId, clearAuthData } = useContext(AuthContext);
 
-    const login = async (email: string, password: string) => {
-        const response = await fetch('http://localhost:3000/auth/sign_in', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password
-            }),
-            credentials: 'include',
-        });
+    const login = async (email: string, password: string): Promise<Response | null> => {
+        try {
+            const response = await fetch('http://localhost:3000/auth/sign_in', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                }),
+                credentials: 'include',
+            });
 
-        if (response.ok) {
-            const data = await response.json() as ApiResponse;
-            console.log('Response Headers:', Array.from(response.headers.entries()));
-            const accessToken = response.headers.get('access-token') || '';
-            const client = response.headers.get('client') || '';
-            const uid = response.headers.get('uid') || '';
-            const userId = data.data.id;
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
+            }
 
-            setAuthData(accessToken, client, uid, data.data.email, userId);
-            console.log('After setAuthData - accessToken:', accessToken, ', client:', client, ', uid:', uid);
-
-            return true;
-        } else {
+            return response;
+        } catch (error) {
+            console.log('Fetch error:', error);
             clearAuthData();
-            return false;
+            return null;
         }
     };
 
-    const logout = async () => {
-        const response = await fetch('http://localhost:3000/auth/sign_out',{
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'access-token': accessToken || '',
-                'client': client || '',
-                'uid': uid || '',
-            },
-            credentials: 'include',
-        });
 
-        if (response.ok) {
+    const logout = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/auth/sign_out',{
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Token': accessToken || '',
+                    'Client': client || '',
+                    'Uid': uid || '',
+                },
+                credentials: 'include',
+            });
+
+            if (!response.ok) {
+                const text = await response.text();
+                throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
+            }
+
             clearAuthData();
             return true;
-        } else {
+        } catch (error) {
+            console.log('Fetch error:', error);
             return false;
         }
     };
