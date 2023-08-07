@@ -41,9 +41,10 @@ export const Home: FC = memo(() => {
         // axios.get("http://localhost:3000/api/v1/stations")
         axios.get("http://localhost:3000/api/v2/stations")
         .then(response => {
-            const dataCamelCased = keysToCamelCase(response.data);
+            console.log(response.data.data);
+            const dataCamelCased = keysToCamelCase(response.data.data);
             setAllStations(dataCamelCased);
-            console.log(allStations);
+            console.log(dataCamelCased);
         })
         .catch(error => {
             console.log(error);
