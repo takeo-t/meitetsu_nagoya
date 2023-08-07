@@ -17,9 +17,10 @@ export const Home: FC = memo(() => {
     const [favorite, setFavorite] = useState<Station[]>([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/v1/stations")
+        // axios.get("http://localhost:3000/api/v1/stations")
+        axios.get("http://localhost:3000/api/v2/stations")
         .then(responce => {
-            setAllStations(responce.data.data);
+            setAllStations(responce.data);
         })
         .catch(error => {
             console.log(error);

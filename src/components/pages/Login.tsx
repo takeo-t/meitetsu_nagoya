@@ -18,17 +18,22 @@ export const Login: FC = memo(() => {
     const handleLogin = async (event: React.FormEvent) => {
         event.preventDefault();
         const response = await login(email, password);
-        console.log('Login result: ', response);
+        console.log(response);
+        
     
         if (response) {
-            const accessToken = response.headers.get('access-token');
-            const client = response.headers.get('client');
-            const uid = response.headers.get('uid');
+            console.log('Login result: ', response.headers);
+            console.log('Login result headers: ', Array.from(response.headers.entries()));
+            const accessToken = response.headers.get('Access-Token'); // Changed 'Access-token' to 'Access-Token'
+            const client = response.headers.get('Client');
+            const uid = response.headers.get('Uid');
             const data = await response.json();
             const userEmail = data.data.email;
             const userId = data.data.id;
+            console.log(accessToken); //console.logを追加
     
             if (accessToken && client && uid) {
+                console.log('Setting auth data with:', { accessToken, client, uid, userEmail, userId });
                 setAuthData(accessToken, client, uid, userEmail, userId);
                 navigate('/');
             }
@@ -42,9 +47,9 @@ export const Login: FC = memo(() => {
 
 
     useEffect(() => {
-        console.log('accessToken: ', accessToken);
-        console.log('client: ', client);
-        console.log('uid: ', uid);
+        console.log('AccessToken: ', accessToken);
+        console.log('Client: ', client);
+        console.log('Uid: ', uid);
     }, [accessToken, client, uid]);
 
   return (

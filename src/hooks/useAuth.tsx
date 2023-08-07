@@ -1,15 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
-// interface ApiResponse {
-//     data: {
-//         id: number;
-//         email: string;
-//     }
-// }
-
 const useAuth = () => {
-    const { accessToken, client, uid, userId, clearAuthData } = useContext(AuthContext);
+    const { accessToken, client, uid, userId, clearAuthData, setAuthData } = useContext(AuthContext);
 
     const login = async (email: string, password: string): Promise<Response | null> => {
         try {
@@ -29,6 +22,15 @@ const useAuth = () => {
                 const text = await response.text();
                 throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
             }
+
+            const authHeaders = {
+                'Access-Token': response.headers.get('Access-Token')!,
+                'Client': response.headers.get('Client')!,
+                'Uid': response.headers.get('Uid')!
+            };
+
+            setAuthData(authHeaders['Access-Token'], authHeaders['Client'], authHeaders['Uid'], email, userId); // この部分を修正します。 
+
 
             return response;
         } catch (error) {
