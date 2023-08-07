@@ -16,11 +16,34 @@ export const Home: FC = memo(() => {
     const [noResults, setNoResults] = useState(false)
     const [favorite, setFavorite] = useState<Station[]>([]);
 
+    const toCamelCase = (str: string) => {
+        return str.replace(/([-_][a-z])/g, (group) =>
+          group.toUpperCase()
+            .replace('-', '')
+            .replace('_', '')
+        );
+      };
+    
+      const keysToCamelCase = (obj: any): any => {
+        if (obj instanceof Array) {
+          return obj.map((v) => keysToCamelCase(v));
+        } else if (obj !== null && obj.constructor === Object) {
+          return Object.fromEntries(
+            Object.entries(obj).map(
+              ([key, value]) => [toCamelCase(key), keysToCamelCase(value)]
+            )
+          );
+        }
+        return obj;
+      };
+
     useEffect(() => {
         // axios.get("http://localhost:3000/api/v1/stations")
         axios.get("http://localhost:3000/api/v2/stations")
-        .then(responce => {
-            setAllStations(responce.data);
+        .then(response => {
+            const dataCamelCased = keysToCamelCase(response.data);
+            setAllStations(dataCamelCased);
+            console.log(allStations);
         })
         .catch(error => {
             console.log(error);
