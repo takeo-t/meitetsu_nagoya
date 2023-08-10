@@ -4,7 +4,7 @@ import { Box, Button } from "@chakra-ui/react";
 import scssShowStations from "../pages/scssShowStations.module.scss";
 import { Station } from "../../type";
 import { StationMappingItem } from "../../type";
-import { addFavoriteStation } from '../../api'
+// import { addFavoriteStation } from '../../api'
 import useAuth from "../../hooks/useAuth";
 
 interface SearchResultsProps {
@@ -22,14 +22,14 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
    const { userId, accessToken, client, uid } = useAuth();
 
-   const handleAddFavoriteStation = useCallback(async () => {
-    try {
-  if (!userId || !selectedStation || !accessToken || !client || !uid) return;
-  await addFavoriteStation(userId, selectedStation.id.toString(), { accessToken, client, uid });
-    } catch (error) {
-        console.error('Failed to add favorite station:', error);
-    }
-}, [userId, selectedStation, accessToken, client, uid]);
+//    const handleAddFavoriteStation = useCallback(async () => {
+//     try {
+//   if (!userId || !selectedStation || !accessToken || !client || !uid) return;
+//   await addFavoriteStation(userId, selectedStation.id.toString(), { accessToken, client, uid });
+//     } catch (error) {
+//         console.error('Failed to add favorite station:', error);
+//     }
+// }, [userId, selectedStation, accessToken, client, uid]);
 
 return (
 selectedStation &&
@@ -88,7 +88,7 @@ selectedStation &&
             <p>{item.forStationsEn}<br />{item.trainClass}</p>
             </div>}
             <Box display="flex" justifyContent="center" alignItems="center">
-            <Button size="sm" onClick={handleAddFavoriteStation}>よく降りる駅に登録</Button>
+            {/* <Button size="sm" onClick={handleAddFavoriteStation}>よく降りる駅に登録</Button> */}
             </Box>
             <Box m={5} display="flex" justifyContent="center" alignItems="center">
             <Button size="sm" onClick={onClick}>検索結果をクリア</Button>

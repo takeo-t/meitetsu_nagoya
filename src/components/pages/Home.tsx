@@ -14,7 +14,7 @@ export const Home: FC = memo(() => {
     const [searchResults, setSearchResults] = useState<Station[]>([]);
     const [selectedStation, setSelectedStation] = useState<Station | null>(null);
     const [noResults, setNoResults] = useState(false)
-    const [favorite, setFavorite] = useState<Station[]>([]);
+    // const [favorite, setFavorite] = useState<Station[]>([]);
 
     const toCamelCase = (str: string) => {
         return str.replace(/([-_][a-z])/g, (group) =>
@@ -70,10 +70,14 @@ export const Home: FC = memo(() => {
         } else {
             const searchedStations = allStations.filter(
                 (station) =>
-                station.stationName !== undefined &&
+                (station.stationName !== undefined &&
                 station.stationName !== null &&
-                station.stationName.toUpperCase().includes(input.toUpperCase())
+                station.stationName.toUpperCase().includes(input.toUpperCase())) ||
+                (station.stationNameKana !== undefined &&
+                station.stationNameKana !== null &&
+                station.stationNameKana.toUpperCase().includes(input.toUpperCase()))
             );
+            
             setSearchResults(searchedStations);
             if (searchedStations.length === 0) {
                 setNoResults(true);
