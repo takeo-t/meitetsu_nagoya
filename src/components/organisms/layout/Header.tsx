@@ -34,7 +34,7 @@ export const Header: FC = memo(() => {
         >
         <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer" }} onClick={onClickHome}>
             <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
-                乗車位置検索of名鉄名古屋駅
+                乗車位置チェッカーof名鉄名古屋駅
             </Heading>
         </Flex>
         <Flex

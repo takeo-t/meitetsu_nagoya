@@ -1,12 +1,4 @@
 export interface Station {
-    // id: number;
-    // lineName: string;
-    // stationNum: string;
-    // stationName: string;
-    // trackNum: string;
-    // position: string;
-    // positionColor: string;
-    // color: string;
     lineName: string;
     stationNum: string;
     stationName: string;
@@ -22,6 +14,13 @@ export interface Station {
     color: string;
     changeStation: boolean;
     id: number;
+}
+
+export interface ChangeStationData {
+    id: number;
+    changeStation: string;
+    changeStationKana: string;
+    changeOnTrain: string;
 }
 
 export interface StationMappingItem {

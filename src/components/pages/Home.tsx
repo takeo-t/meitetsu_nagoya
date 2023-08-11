@@ -4,8 +4,9 @@ import axios from 'axios';
 
 import { SearchInput } from "../../components/organisms/SearchInput";
 import { SearchResults } from "../organisms/SearchResult";
-import { Station } from "../../type";
-import { StationMappingItem } from "../../type";
+import { Station, StationMappingItem, ChangeStationData } from "../../type";
+import { ModalComponent } from "../organisms/ModalComponent"
+import { TrainInfo } from "../organisms/TrainInfo";
 
 
 export const Home: FC = memo(() => {
@@ -14,6 +15,8 @@ export const Home: FC = memo(() => {
     const [searchResults, setSearchResults] = useState<Station[]>([]);
     const [selectedStation, setSelectedStation] = useState<Station | null>(null);
     const [noResults, setNoResults] = useState(false)
+    const [changeStationData, setChangeStationData] = useState<{ data: ChangeStationData[] } | null>(null);
+    const [matchingStation, setMatchingStation] = useState<ChangeStationData | null>(null);
     // const [favorite, setFavorite] = useState<Station[]>([]);
 
     const toCamelCase = (str: string) => {
@@ -38,7 +41,6 @@ export const Home: FC = memo(() => {
       };
 
     useEffect(() => {
-        // axios.get("http://localhost:3000/api/v1/stations")
         axios.get("http://localhost:3000/api/v2/stations")
         .then(response => {
             console.log(response.data.data);
@@ -54,12 +56,13 @@ export const Home: FC = memo(() => {
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
-        setNoResults(false)
+        setNoResults(false);
+        search(event.target.value);
     };
 
-    const handleSearch = () => {
-        search(inputValue)
-    }
+    // const handleSearch = () => {
+    //     search(inputValue)
+    // }
   
     const search = (input: string) => {
         if (input === "") {
@@ -94,15 +97,39 @@ export const Home: FC = memo(() => {
     const handleClick = (station: Station) => {
         if (selectedStation && selectedStation.id === station.id) {
             setSelectedStation(null);
+            setChangeStationData(null);
         } else {
             setSelectedStation(station);
+            if(station.changeStation){
+                axios.get('http://localhost:3000/api/v2/stations/change_stations')
+                .then(response => {
+                    console.log("Fetched data:", response.data);
+                    setChangeStationData(response.data);
+                })
+                .catch(error => {
+                    console.error("Error fetching change station data:", error);
+                    console.log(error.response);
+                });
+            }
         }
     };
+
+    useEffect(() => {
+        if (selectedStation && changeStationData && changeStationData.data) {
+            const match = changeStationData.data.find(stationData => stationData.id === selectedStation.id);
+            setMatchingStation(match || null);
+        } else {
+            setMatchingStation(null);
+        }
+    }, [selectedStation, changeStationData]);
+    console.log("Rendering with matchingStation:", matchingStation);
+
 
     const handleClearInput = () => {
         setInputValue("");
         setSearchResults([]);
         setSelectedStation(null);
+        setChangeStationData(null);
       };
 
     const forStations: string[] = ['岡崎・豊橋','鳴海・豊明','河和.内海.中部国際空港','大江・太田川','一宮・岐阜','須ヶ口・国府宮','津島・弥富','犬山・可児','西春・岩倉'];
@@ -120,18 +147,20 @@ export const Home: FC = memo(() => {
             '19': {forStations: forStations[8], forStationsEn: forStationsEn[8], trainClass: trainClass[0]}
         };
 
+
     return (
         <>
         <Box display="flex" justifyContent="center" alignItems="center">
         <h1>降りる駅または最初に乗換えする駅を入力してください。</h1>
         <h2>※対応する駅は名鉄線のみです</h2>
         </Box>
+        <ModalComponent />
         <Stack spacing={4} direction='column' align='center'>
         <SearchInput value={inputValue} onChange={handleInputChange}/>
         </Stack>
-        <Box display="flex" justifyContent="center" alignItems="center">
+        {/* <Box display="flex" justifyContent="center" alignItems="center">
         <Button py={3} onClick={handleSearch}>検索</Button>
-        </Box>
+        </Box> */}
         <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
          <Box mb={5}>
@@ -142,11 +171,23 @@ export const Home: FC = memo(() => {
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
-                <Button colorScheme='white' m={2} variant='link'>・{station.stationName}駅</Button>
+                <Button colorScheme='white' m={2} variant='link'>・{station.stationName}({station.stationNameKana})駅</Button>
             </div>
         ))}
         </Box>
-        <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput}/>
+        <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
+
+        <Box display="flex" justifyContent="center" alignItems="center">
+            {selectedStation && <TrainInfo {...selectedStation} />}
+        </Box>
+        </Box>
+        <Box>
+        {matchingStation && (
+        <>
+            <p>Change Station: {matchingStation.changeStation}</p>
+            <p>Change on Train: {matchingStation.changeOnTrain}</p>
+        </>
+    )}
         </Box>
         </>
     );
