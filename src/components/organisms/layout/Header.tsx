@@ -2,13 +2,13 @@ import { memo, FC, useCallback, useContext } from 'react';
 import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-import { MenuIconButton } from '../../atoms/button/MenuIconButton';
-import { MenuDrawer } from '../../molecules/MenuDrawer';
-import { AuthContext } from '../../../contexts/AuthContext';
+// import { MenuIconButton } from '../../atoms/button/MenuIconButton';
+// import { MenuDrawer } from '../../molecules/MenuDrawer';
+// import { AuthContext } from '../../../contexts/AuthContext';
 
 
 export const Header: FC = memo(() => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    // const { isOpen, onOpen, onClose } = useDisclosure();
     const navigate = useNavigate();
 
     const onClickHome = useCallback(() => navigate('/'),[navigate]);
@@ -17,13 +17,13 @@ export const Header: FC = memo(() => {
     const onClickLogin = useCallback(() => navigate('/login'),[navigate]);
     const onClickRegister = useCallback(() => navigate('/register'),[navigate]);
 
-    const { userEmail } = useContext(AuthContext);
-    console.log(userEmail);
+    // const { userEmail } = useContext(AuthContext);
+    // console.log(userEmail);
 
 
     return (
         <>
-        <Box>{userEmail}</Box>
+        {/* <Box>{userEmail}</Box> */}
         <Flex
         as="nav"
         bg="teal.100"
@@ -47,16 +47,16 @@ export const Header: FC = memo(() => {
             <Link mr={4} onClick={onClickLogin}>ログイン</Link>
             <Link mr={4} onClick={onClickRegister}>新規登録</Link>
         </Flex>
-        <MenuIconButton onOpen={onOpen}/>
+        {/* <MenuIconButton onOpen={onOpen}/> */}
         </Flex>
-        <MenuDrawer
+        {/* <MenuDrawer
         onClickLogin={onClickLogin}
         onClickRegister={onClickRegister}
         onClickHome={onClickHome}
         onClickFavorite={onClickFavorite}
         onClickSetting={onClickSetting}
         onClose={onClose}
-        isOpen={isOpen} />
+        isOpen={isOpen} /> */}
         </>
     );
 });

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Box, Button } from "@chakra-ui/react";
-import scssShowStations from "../pages/scssShowStations.module.scss";
+import  scssShowStations from "../pages/scssShowStations.module.scss";
 import { Station, ChangeStationData, StationMappingItem } from "../../type";
 import useAuth from "../../hooks/useAuth";
 
@@ -16,7 +16,6 @@ export const SearchResults: FC<SearchResultsProps> = ({
     selectedStation,
     stationMapping,
     onClick,
-    changeStationData
 }) => {
 
     const { userId, accessToken, client, uid } = useAuth();
@@ -40,9 +39,9 @@ export const SearchResults: FC<SearchResultsProps> = ({
     const renderStationInfo = (item: StationMappingItem) => {
         const styleClass = stationStylesMapping[item.forStationsEn];
         return (
-            <div className={styleClass}>
-                <p style={{ fontSize: "30px" }}>{item.forStations}</p>
-                <p>{item.forStationsEn}<br />{item.trainClass}</p>
+            <div className={`${styleClass} ${scssShowStations.stationInfoBase}`}>
+                <p className="scssShowStations.title">{item.forStations}</p>
+                <p className="scssShowStations.description">{item.forStationsEn}<br />{item.trainClass}</p>
             </div>
         );
     };
@@ -50,11 +49,13 @@ export const SearchResults: FC<SearchResultsProps> = ({
     return (
         selectedStation &&
         <div>
-            <Box mb={5}>検索結果</Box>
+            <Box mb={5} fontSize={['sm', 'md', 'lg']}>検索結果</Box>
+            <Box fontSize={['sm', 'md', 'lg']}>
             <p>駅名: {selectedStation.stationName}({selectedStation.stationNameKana})駅</p>
             <p>路線名: {selectedStation.lineName}</p>
             <p>到着ホーム: {selectedStation.trackNum}番ホーム</p>
-            <Box mt={5}>下記表示の{selectedStation.positionColor}色乗車位置に並んでください。</Box>
+            </Box>
+            <Box mt={5} fontSize={['sm', 'md', 'lg']}>下記表示の{selectedStation.positionColor}色乗車位置に並んでください。</Box>
             {(() => {
                 const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
                 return (

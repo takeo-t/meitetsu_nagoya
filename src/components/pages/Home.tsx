@@ -6,7 +6,7 @@ import { SearchInput } from "../../components/organisms/SearchInput";
 import { SearchResults } from "../organisms/SearchResult";
 import { Station, StationMappingItem, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent"
-import { TrainInfo } from "../organisms/TrainInfo";
+// import { TrainInfo } from "../organisms/TrainInfo";
 
 
 export const Home: FC = memo(() => {
@@ -85,11 +85,11 @@ export const Home: FC = memo(() => {
             if (searchedStations.length === 0) {
                 setNoResults(true);
             } else {
-            if (searchedStations.length === 1) {
-                setSelectedStation(searchedStations[0]);
-            } else {
+            // if (searchedStations.length === 1) {
+            //     setSelectedStation(searchedStations[0]);
+            // } else {
                 setSelectedStation(null);
-            }
+            // }
         }
     }
     };
@@ -104,7 +104,8 @@ export const Home: FC = memo(() => {
                 axios.get('http://localhost:3000/api/v2/stations/change_stations')
                 .then(response => {
                     console.log("Fetched data:", response.data);
-                    setChangeStationData(response.data);
+                    const dataCamelCased = keysToCamelCase(response.data);
+                    setChangeStationData(dataCamelCased);
                 })
                 .catch(error => {
                     console.error("Error fetching change station data:", error);
@@ -151,8 +152,6 @@ export const Home: FC = memo(() => {
     return (
         <>
         <Box display="flex" justifyContent="center" alignItems="center">
-        <h1>降りる駅または最初に乗換えする駅を入力してください。</h1>
-        <h2>※対応する駅は名鉄線のみです</h2>
         </Box>
         <ModalComponent />
         <Stack spacing={4} direction='column' align='center'>
@@ -163,9 +162,9 @@ export const Home: FC = memo(() => {
         </Box> */}
         <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
-         <Box mb={5}>
+         <Box mb={5} fontSize={['sm', 'md', 'lg']}>
         {noResults && <p>該当する駅が見つかりませんでした。</p>}
-        <Box m={5}>
+        <Box mb={5} fontSize={['sm', 'md', 'lg']}>
         {searchResults.length >= 1 && !selectedStation && <p>候補の駅を表示します</p>}
         </Box>
         </Box>
@@ -175,19 +174,19 @@ export const Home: FC = memo(() => {
             </div>
         ))}
         </Box>
-        <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
-
-        <Box display="flex" justifyContent="center" alignItems="center">
-            {selectedStation && <TrainInfo {...selectedStation} />}
-        </Box>
-        </Box>
         <Box>
+        <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
+        <Box mb={5} fontSize={['sm', 'md', 'lg']}>
         {matchingStation && (
         <>
-            <p>Change Station: {matchingStation.changeStation}</p>
-            <p>Change on Train: {matchingStation.changeOnTrain}</p>
+            <p>⚠️{matchingStation.changeTrain}に乗車して{matchingStation.changeStation}駅で{matchingStation.changeOnTrain}電車に乗り換えしてください。</p>
         </>
-    )}
+        )}
+        </Box>
+        </Box>
+        <Box display="flex" justifyContent="center" alignItems="center">
+            {/* {selectedStation && <TrainInfo {...selectedStation} />} */}
+        </Box>
         </Box>
         </>
     );

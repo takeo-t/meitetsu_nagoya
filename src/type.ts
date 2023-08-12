@@ -21,6 +21,7 @@ export interface ChangeStationData {
     changeStation: string;
     changeStationKana: string;
     changeOnTrain: string;
+    changeTrain: string;
 }
 
 export interface StationMappingItem {
