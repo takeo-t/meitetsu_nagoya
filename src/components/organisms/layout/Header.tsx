@@ -12,10 +12,10 @@ export const Header: FC = memo(() => {
     const navigate = useNavigate();
 
     const onClickHome = useCallback(() => navigate('/'),[navigate]);
-    const onClickFavorite = useCallback(() => navigate('/favorite'),[navigate]);
-    const onClickSetting = useCallback(() => navigate('/setting'),[navigate]);
-    const onClickLogin = useCallback(() => navigate('/login'),[navigate]);
-    const onClickRegister = useCallback(() => navigate('/register'),[navigate]);
+    // const onClickFavorite = useCallback(() => navigate('/favorite'),[navigate]);
+    // const onClickSetting = useCallback(() => navigate('/setting'),[navigate]);
+    // const onClickLogin = useCallback(() => navigate('/login'),[navigate]);
+    // const onClickRegister = useCallback(() => navigate('/register'),[navigate]);
 
     // const { userEmail } = useContext(AuthContext);
     // console.log(userEmail);
@@ -42,10 +42,10 @@ export const Header: FC = memo(() => {
         fontSize="sm"
         flexGrow={2}
         display={{ base: "none", md: "flex" }}>
-            <Link mr={4} onClick={onClickFavorite}>よく降りる駅</Link>
+            {/* <Link mr={4} onClick={onClickFavorite}>よく降りる駅</Link>
             <Link mr={4} onClick={onClickSetting}>設定</Link>
             <Link mr={4} onClick={onClickLogin}>ログイン</Link>
-            <Link mr={4} onClick={onClickRegister}>新規登録</Link>
+            <Link mr={4} onClick={onClickRegister}>新規登録</Link> */}
         </Flex>
         {/* <MenuIconButton onOpen={onOpen}/> */}
         </Flex>

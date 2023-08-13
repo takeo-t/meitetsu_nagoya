@@ -48,7 +48,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
     return (
         selectedStation &&
-        <div>
+        <Box mb={5}>
             <Box mb={5} fontSize={['sm', 'md', 'lg']}>検索結果</Box>
             <Box fontSize={['sm', 'md', 'lg']}>
             <p>駅名: {selectedStation.stationName}({selectedStation.stationNameKana})駅</p>
@@ -71,6 +71,6 @@ export const SearchResults: FC<SearchResultsProps> = ({
                     </>
                 );
             })()}
-        </div>
+        </Box>
     );
 }

@@ -145,7 +145,7 @@ export const Home: FC = memo(() => {
             '16': {forStations: forStations[5], forStationsEn: forStationsEn[5], trainClass: trainClass[1]},
             '17': {forStations: forStations[6], forStationsEn: forStationsEn[6], trainClass: trainClass[0]},
             '18': {forStations: forStations[7], forStationsEn: forStationsEn[7], trainClass: trainClass[0]},
-            '19': {forStations: forStations[8], forStationsEn: forStationsEn[8], trainClass: trainClass[0]}
+            '19': {forStations: forStations[8], forStationsEn: forStationsEn[8], trainClass: trainClass[1]}
         };
 
 
