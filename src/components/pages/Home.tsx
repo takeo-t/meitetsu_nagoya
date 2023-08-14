@@ -170,7 +170,7 @@ export const Home: FC = memo(() => {
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
-                <Button colorScheme='white' m={2} variant='link'>・{station.stationName}({station.stationNameKana})駅</Button>
+                <Button colorScheme='white' m={2} variant='link'>{station.stationName}駅<br />({station.stationNameKana})</Button>
             </div>
         ))}
         </Box>
@@ -179,7 +179,7 @@ export const Home: FC = memo(() => {
         <Box mb={5} fontSize={['sm', 'md', 'lg']}>
         {matchingStation && (
         <>
-            <p>⚠️{matchingStation.changeTrain}に乗車して{matchingStation.changeStation}駅で{matchingStation.changeOnTrain}電車に乗り換えしてください。</p>
+            <p>⚠️{matchingStation.changeTrain}に乗車して{matchingStation.changeStation}駅で<br />{matchingStation.changeOnTrain}電車に乗り換えしてください。</p>
         </>
         )}
         </Box>
