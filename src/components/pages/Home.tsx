@@ -41,7 +41,8 @@ export const Home: FC = memo(() => {
       };
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/v2/stations")
+        // axios.get("http://localhost:3000/api/v2/stations")
+        axios.get("https://salty-coast-59175-f158b61abb95.herokuapp.com/api/v2/stations")
         .then(response => {
             console.log(response.data.data);
             const dataCamelCased = keysToCamelCase(response.data.data);
@@ -101,7 +102,8 @@ export const Home: FC = memo(() => {
         } else {
             setSelectedStation(station);
             if(station.changeStation){
-                axios.get('http://localhost:3000/api/v2/stations/change_stations')
+                // axios.get('http://localhost:3000/api/v2/stations/change_stations')
+                axios.get('https://salty-coast-59175-f158b61abb95.herokuapp.com/api/v2/stations/change_stations')
                 .then(response => {
                     console.log("Fetched data:", response.data);
                     const dataCamelCased = keysToCamelCase(response.data);
