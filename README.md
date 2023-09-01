@@ -87,7 +87,7 @@
   npm start
   ```
 4. 駅データについて
-  4.1. 駅データはRails APIで製作したアプリケーションからfetchします。  
+  4.1. 駅データはRails APIで製作したアプリケーション(my_station)からfetchします。  
   ```
   https://github.com/takeo-t/my_station
   ```
