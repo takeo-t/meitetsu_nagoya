@@ -1,6 +1,16 @@
 import { FC, memo } from "react";
+import { useFavorite } from "../../contexts/FavoriteContext";
 
+export const Favorite: FC = memo(() => {
+    const { favoriteStation } = useFavorite();
 
-export const Favorite = () => {
-    return <p>降りる駅一覧</p>
-}
+    if (!favoriteStation) return <p>お気に入りの駅はありません</p>;
+
+    // ここで favoriteStation を使用して情報を表示
+    return (
+        <div>
+            <p>{favoriteStation.forStations}</p>
+            <p>{favoriteStation.forStationsEn}</p>
+        </div>
+    );
+});
