@@ -1,12 +1,12 @@
 import { createContext, useContext, useState } from "react";
 import { StationMappingItem } from "../type";
 
-type FavoriteContextType = {
+export type FavoriteContextType = {
     favoriteStation: StationMappingItem | null;
     setFavoriteStation: (station: StationMappingItem) => void;
 };
 
-const FavoriteContext = createContext<FavoriteContextType | undefined>(undefined);
+export const FavoriteContext = createContext<FavoriteContextType | undefined>(undefined);
 
 interface FavoriteProviderProps {
     children: React.ReactNode;

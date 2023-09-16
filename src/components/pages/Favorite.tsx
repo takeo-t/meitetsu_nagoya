@@ -11,6 +11,7 @@ export const Favorite: FC = memo(() => {
         <div>
             <p>{favoriteStation.forStations}</p>
             <p>{favoriteStation.forStationsEn}</p>
+            <p>{favoriteStation.trainClass}</p>
         </div>
     );
 });
