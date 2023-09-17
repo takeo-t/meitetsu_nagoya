@@ -1,12 +1,10 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Stack, Box, Button, } from '@chakra-ui/react'
+import { Box, Button, } from '@chakra-ui/react'
 import axios from 'axios';
-
-import { SearchInput } from "../../components/organisms/SearchInput";
 import { SearchResults } from "../organisms/SearchResult";
 import { Station, StationMappingItem, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent"
-// import { TrainInfo } from "../organisms/TrainInfo";
+import { SearchComponent } from "../organisms/Search Component";
 
 
 export const Home: FC = memo(() => {
@@ -17,7 +15,6 @@ export const Home: FC = memo(() => {
     const [noResults, setNoResults] = useState(false)
     const [changeStationData, setChangeStationData] = useState<{ data: ChangeStationData[] } | null>(null);
     const [matchingStation, setMatchingStation] = useState<ChangeStationData | null>(null);
-    // const [favorite, setFavorite] = useState<Station[]>([]);
 
     const toCamelCase = (str: string) => {
         return str.replace(/([-_][a-z])/g, (group) =>
@@ -153,18 +150,11 @@ export const Home: FC = memo(() => {
 
     return (
         <>
-        <Box display="flex" justifyContent="center" alignItems="center">
-        </Box>
+        <SearchComponent value={inputValue} onChange={handleInputChange} noResults={noResults} />
         <ModalComponent />
-        <Stack spacing={4} direction='column' align='center'>
-        <SearchInput value={inputValue} onChange={handleInputChange}/>
-        </Stack>
-        <Box display="flex" justifyContent="center" alignItems="center">
         <Box>
          <Box mb={5} fontSize={['sm', 'md', 'lg']}>
-        {noResults && <p>該当する駅が見つかりませんでした。</p>}
         <Box mb={5} fontSize={['sm', 'md', 'lg']}>
-        {searchResults.length >= 1 && !selectedStation && <p>候補の駅を表示します</p>}
         </Box>
         </Box>
         {!selectedStation && searchResults.map((station, index) => (
@@ -184,8 +174,6 @@ export const Home: FC = memo(() => {
         </Box>
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center">
-            {/* {selectedStation && <TrainInfo {...selectedStation} />} */}
-        </Box>
         </Box>
         </>
     );
