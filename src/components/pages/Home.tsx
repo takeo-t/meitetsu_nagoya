@@ -4,7 +4,7 @@ import axios from 'axios';
 import { SearchResults } from "../organisms/SearchResult";
 import { Station, StationMappingItem, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent"
-import { SearchComponent } from "../organisms/Search Component";
+import { SearchComponent } from "../organisms/SearchComponent";
 
 
 export const Home: FC = memo(() => {
@@ -58,9 +58,6 @@ export const Home: FC = memo(() => {
         search(event.target.value);
     };
 
-    // const handleSearch = () => {
-    //     search(inputValue)
-    // }
   
     const search = (input: string) => {
         if (input === "") {

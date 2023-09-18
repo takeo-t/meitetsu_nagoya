@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Box, Stack } from '@chakra-ui/react';
 
-import { SearchInput } from "../../components/organisms/SearchInput";
+import { SearchInput } from "./SearchInput";
 
 type SearchComponentProps = {
   value: string;
