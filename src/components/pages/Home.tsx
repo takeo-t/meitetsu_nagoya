@@ -5,6 +5,7 @@ import { SearchResults } from "../organisms/SearchResult";
 import { Station, StationMappingItem, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent"
 import { SearchComponent } from "../organisms/SearchComponent";
+import { MatchingStationComponent } from "../organisms/MatchingStationComponent";
 
 
 export const Home: FC = memo(() => {
@@ -41,13 +42,11 @@ export const Home: FC = memo(() => {
         axios.get("http://localhost:3000/api/v2/stations")
         // axios.get("https://salty-coast-59175-f158b61abb95.herokuapp.com/api/v2/stations")
         .then(response => {
-            console.log(response.data.data);
             const dataCamelCased = keysToCamelCase(response.data.data);
             setAllStations(dataCamelCased);
             console.log(dataCamelCased);
         })
         .catch(error => {
-            console.log(error);
             alert('読み込みに失敗しました。')
         });
       }, []);
@@ -162,13 +161,7 @@ export const Home: FC = memo(() => {
         </Box>
         <Box>
         <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
-        <Box mb={5} fontSize={['sm', 'md', 'lg']}>
-        {matchingStation && (
-        <>
-            <p>⚠️{matchingStation.changeTrain}に乗車して{matchingStation.changeStation}駅で<br />{matchingStation.changeOnTrain}電車に乗り換えしてください。</p>
-        </>
-        )}
-        </Box>
+        <MatchingStationComponent matchingStation={matchingStation} />
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center">
         </Box>
