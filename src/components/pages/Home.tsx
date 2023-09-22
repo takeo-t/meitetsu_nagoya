@@ -149,10 +149,6 @@ export const Home: FC = memo(() => {
         <SearchComponent value={inputValue} onChange={handleInputChange} noResults={noResults} />
         <ModalComponent />
         <Box>
-         <Box mb={5} fontSize={['sm', 'md', 'lg']}>
-        <Box mb={5} fontSize={['sm', 'md', 'lg']}>
-        </Box>
-        </Box>
         {!selectedStation && searchResults.map((station, index) => (
             <div key={index} onClick={() => handleClick(station)}>
                 <Button colorScheme='white' m={2} variant='link'>{station.stationName}駅<br />({station.stationNameKana})</Button>
@@ -162,8 +158,6 @@ export const Home: FC = memo(() => {
         <Box>
         <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
         <MatchingStationComponent matchingStation={matchingStation} />
-        </Box>
-        <Box display="flex" justifyContent="center" alignItems="center">
         </Box>
         </>
     );
