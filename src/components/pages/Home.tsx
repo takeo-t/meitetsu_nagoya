@@ -6,6 +6,7 @@ import { Station, StationMappingItem, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent"
 import { SearchComponent } from "../organisms/SearchComponent";
 import { MatchingStationComponent } from "../organisms/MatchingStationComponent";
+import { StationCandidates } from "../organisms/StationCandidates";
 
 
 export const Home: FC = memo(() => {
@@ -79,11 +80,7 @@ export const Home: FC = memo(() => {
             if (searchedStations.length === 0) {
                 setNoResults(true);
             } else {
-            // if (searchedStations.length === 1) {
-            //     setSelectedStation(searchedStations[0]);
-            // } else {
                 setSelectedStation(null);
-            // }
         }
     }
     };
@@ -148,17 +145,9 @@ export const Home: FC = memo(() => {
         <>
         <SearchComponent value={inputValue} onChange={handleInputChange} noResults={noResults} />
         <ModalComponent />
-        <Box>
-        {!selectedStation && searchResults.map((station, index) => (
-            <div key={index} onClick={() => handleClick(station)}>
-                <Button colorScheme='white' m={2} variant='link'>{station.stationName}駅<br />({station.stationNameKana})</Button>
-            </div>
-        ))}
-        </Box>
-        <Box>
+        <StationCandidates selectedStation={selectedStation} searchResults={searchResults} handleClick={handleClick}/>
         <SearchResults searchResults={searchResults} selectedStation={selectedStation} stationMapping={stationMapping} onClick={handleClearInput} changeStationData={changeStationData?.data[0] || null}/>
         <MatchingStationComponent matchingStation={matchingStation} />
-        </Box>
         </>
     );
 });
