@@ -10,4 +10,3 @@ return (
     <Button colorScheme="red" width="full" mt={4} onClick={handleLogout}>ログアウト</Button>
 )
 }
-

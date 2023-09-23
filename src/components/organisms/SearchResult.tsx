@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import  scssShowStations from "../pages/scssShowStations.module.scss";
 import { Station, ChangeStationData, StationMappingItem } from "../../type";
-import useAuth from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { useFavorite } from "../../contexts/FavoriteContext";
 
 interface SearchResultsProps {
@@ -72,7 +72,6 @@ const addToFavoriteHandler = () => {
                     <>
                         {renderStationInfo(item)}
                         <Box display="flex" justifyContent="center" alignItems="center">
-                            {/* Uncomment the below line to enable the "Add to favorite stations" button */}
                             <Button size="sm" onClick={addToFavoriteHandler}>よく降りる駅に登録</Button>
                         </Box>
                         <Box m={5} display="flex" justifyContent="center" alignItems="center">

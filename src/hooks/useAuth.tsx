@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
-const useAuth = () => {
+export const useAuth = () => {
     const { accessToken, client, uid, userId, clearAuthData, setAuthData } = useContext(AuthContext);
 
     const login = async (email: string, password: string): Promise<Response | null> => {
@@ -29,7 +29,7 @@ const useAuth = () => {
                 'Uid': response.headers.get('Uid')!
             };
 
-            setAuthData(authHeaders['Access-Token'], authHeaders['Client'], authHeaders['Uid'], email, userId); // この部分を修正します。 
+            setAuthData(authHeaders['Access-Token'], authHeaders['Client'], authHeaders['Uid'], email, userId);
 
 
             return response;
@@ -69,5 +69,3 @@ const useAuth = () => {
 
     return { login, logout, userId, accessToken, client, uid };
 };
-
-export default useAuth;

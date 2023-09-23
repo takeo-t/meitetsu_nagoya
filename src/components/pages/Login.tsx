@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { LogOutButton } from "../atoms/button/LogOutButton";
 
 
 
@@ -53,6 +54,7 @@ export const Login: FC = memo(() => {
     }, [accessToken, client, uid]);
 
   return (
+    <>
     <Box as="form" p={5} shadow="md" borderWidth="1px" onSubmit={handleLogin}>
       <FormControl id="email" isRequired>
         <FormLabel>Email address</FormLabel>
@@ -67,10 +69,9 @@ export const Login: FC = memo(() => {
       <Button colorScheme="blue" type="submit" width="full" mt={4}>
         Sign In
       </Button>
-      <Button colorScheme="red" width="full" mt={4} onClick={handleLogout}>
-        Log Out
-      </Button>
     </Box>
+     <LogOutButton handleLogout={handleLogout}/>
+     </>
   );
 }
 );
