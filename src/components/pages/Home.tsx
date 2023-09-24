@@ -1,5 +1,4 @@
 import { memo, FC, useState, useEffect } from "react";
-import { Box, Button, } from '@chakra-ui/react'
 import axios from 'axios';
 import { SearchResults } from "../organisms/SearchResult";
 import { Station, StationMappingItem, ChangeStationData } from "../../type";
