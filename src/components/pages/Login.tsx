@@ -1,10 +1,9 @@
 import { useState, useContext } from "react";
 import { memo, FC, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import useAuth from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { AuthContext } from "../../contexts/AuthContext";
-import { LogOutButton } from "../atoms/button/LogOutButton";
 
 
 
@@ -25,13 +24,13 @@ export const Login: FC = memo(() => {
         if (response) {
             console.log('Login result: ', response.headers);
             console.log('Login result headers: ', Array.from(response.headers.entries()));
-            const accessToken = response.headers.get('Access-Token'); // Changed 'Access-token' to 'Access-Token'
+            const accessToken = response.headers.get('Access-Token');
             const client = response.headers.get('Client');
             const uid = response.headers.get('Uid');
             const data = await response.json();
             const userEmail = data.data.email;
             const userId = data.data.id;
-            console.log(accessToken); //console.logを追加
+            console.log(accessToken);
     
             if (accessToken && client && uid) {
                 console.log('Setting auth data with:', { accessToken, client, uid, userEmail, userId });
@@ -70,7 +69,6 @@ export const Login: FC = memo(() => {
         Sign In
       </Button>
     </Box>
-     <LogOutButton handleLogout={handleLogout}/>
      </>
   );
 }
