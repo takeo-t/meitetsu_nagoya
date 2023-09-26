@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import { FC, createContext, useContext } from 'react';
 import { useAuth } from '../hooks/useAuth';
 
 interface LogoutContextProps {
@@ -7,7 +7,7 @@ interface LogoutContextProps {
 
 const LogoutContext = createContext<LogoutContextProps | undefined>(undefined);
 
-export const LogoutProvider: React.FC = () => {
+export const LogoutProvider: FC = ({ children }) => {
   const { logout } = useAuth();
 
   const handleLogout = async () => {

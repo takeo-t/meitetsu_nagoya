@@ -1,14 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
 import { useLogout } from '../contexts/LogoutContext';
 
-const Header: React.FC = () => {
+export const Header: FC = ({ children }) => {
   const { handleLogout } = useLogout();
 
   return (
-    <header>
+    <Header>
       <button onClick={handleLogout}>Logout</button>
-    </header>
+    </Header>
   );
 };
-
-export default Header;
