@@ -1,5 +1,4 @@
-import { useState, useContext } from "react";
-import { memo, FC, useEffect } from "react";
+import { useState, useContext, memo, FC, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from "../../hooks/useAuth";
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
@@ -30,7 +29,6 @@ export const Login: FC = memo(() => {
             const data = await response.json();
             const userEmail = data.data.email;
             const userId = data.data.id;
-            console.log(accessToken);
     
             if (accessToken && client && uid) {
                 console.log('Setting auth data with:', { accessToken, client, uid, userEmail, userId });
