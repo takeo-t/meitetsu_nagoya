@@ -1,13 +1,18 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
+import { useAuth } from "../../../hooks/useAuth";
 
-type Props = {
-    handleLogout: () => void;
-};
+export const LogOutButton: FC = () => {
+    const { logout } = useAuth();
+    const navigate = useNavigate();
 
-export const LogOutButton: FC<Props> = ({handleLogout}) => {
+    const handleLogout = async () => {
+        await logout();
+        navigate('/login');
+    }
 return (
-    <Button colorScheme="red" width="full" mt={4} onClick={handleLogout}>ログアウト</Button>
+    <Button colorScheme="red" mt={4} onClick={handleLogout}>ログアウト</Button>
 )
 }
 

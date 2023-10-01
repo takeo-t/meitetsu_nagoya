@@ -9,7 +9,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 export const Login: FC = memo(() => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { login, logout, accessToken, client, uid } = useAuth();
+    const { login, accessToken, client, uid } = useAuth();
     const { setAuthData } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -38,10 +38,7 @@ export const Login: FC = memo(() => {
         }
     }
 
-    const handleLogout = async () => {
-        const result = await logout();
-        console.log('Logout result: ', result);
-    };
+    
 
 
     useEffect(() => {

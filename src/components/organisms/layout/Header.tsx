@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { MenuIconButton } from '../../atoms/button/MenuIconButton';
 import { MenuDrawer } from '../../molecules/MenuDrawer';
 import { AuthContext } from '../../../contexts/AuthContext';
+import { LogOutButton } from '../../atoms/button/LogOutButton';
 
 
 export const Header: FC = memo(() => {
@@ -23,7 +24,6 @@ export const Header: FC = memo(() => {
 
     return (
         <>
-        <Box>{userEmail}</Box>
         <Flex
         as="nav"
         bg="teal.100"
@@ -38,6 +38,27 @@ export const Header: FC = memo(() => {
             </Heading>
         </Flex>
         <Flex
+         align="center"
+         fontSize="sm"
+         flexGrow={2}
+         display={{ base: "none", md: "flex" }}></Flex>
+        {userEmail ? (
+        // ログインしている場合
+        <>
+            <Box>ようこそ！{userEmail}様</Box>
+            <LogOutButton />
+            <Link mr={4} onClick={onClickFavorite}>乗車位置メモ</Link>
+            <Link mr={4} onClick={onClickSetting}>設定</Link>
+        </>
+        ) : (
+        // ログインしていない場合
+        <>
+            <Link mr={4} onClick={onClickLogin}>ログイン</Link>
+            <Link mr={4} onClick={onClickRegister}>新規登録</Link>
+        </>
+        )}
+        </Flex>
+        {/* <Flex
         align="center"
         fontSize="sm"
         flexGrow={2}
@@ -46,9 +67,10 @@ export const Header: FC = memo(() => {
             <Link mr={4} onClick={onClickSetting}>設定</Link>
             <Link mr={4} onClick={onClickLogin}>ログイン</Link>
             <Link mr={4} onClick={onClickRegister}>新規登録</Link>
-        </Flex>
+            <LogOutButton />
+        </Flex> */}
         <MenuIconButton onOpen={onOpen}/>
-        </Flex>
+        {/* </Flex> */}
         <MenuDrawer
         onClickLogin={onClickLogin}
         onClickRegister={onClickRegister}

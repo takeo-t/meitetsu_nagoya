@@ -13,7 +13,8 @@ describe("Favorite component", () => {
   it("should display a message when there's no favorite station", () => {
     const mockFavoriteContext: FavoriteContextType = {
       favoriteStation: null,
-      setFavoriteStation: jest.fn()
+      setFavoriteStation: jest.fn(),
+      saveFavoriteStation: jest.fn()
     };
 
     const { getByText } = render(
@@ -28,7 +29,8 @@ describe("Favorite component", () => {
   it("should display the favorite station's information when it exists", () => {
     const mockFavoriteContext: FavoriteContextType = {
       favoriteStation: mockStation,
-      setFavoriteStation: jest.fn()
+      setFavoriteStation: jest.fn(),
+      saveFavoriteStation: jest.fn()
     };
 
     const { getByText } = render(

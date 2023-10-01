@@ -21,6 +21,7 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
     const { userId, accessToken, client, uid } = useAuth();
 
+
     type StationStylesMappingType = {
         [key: string]: string;
     };
@@ -47,13 +48,13 @@ export const SearchResults: FC<SearchResultsProps> = ({
         );
     };
 
-    const { setFavoriteStation } = useFavorite();
+    const { setFavoriteStation, saveFavoriteStation } = useFavorite();
 
-const addToFavoriteHandler = () => {
+const addToFavoriteHandler = async () => {
     if (!selectedStation) return;
 
     const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
-    setFavoriteStation(item);
+    await saveFavoriteStation(item);
 };
 
     return (
@@ -72,7 +73,7 @@ const addToFavoriteHandler = () => {
                     <>
                         {renderStationInfo(item)}
                         <Box display="flex" justifyContent="center" alignItems="center">
-                            <Button size="sm" onClick={addToFavoriteHandler}>よく降りる駅に登録</Button>
+                            <Button size="sm" onClick={addToFavoriteHandler}>乗車位置をメモする</Button>
                         </Box>
                         <Box m={5} display="flex" justifyContent="center" alignItems="center">
                             <Button size="sm" onClick={onClick}>検索結果をクリア</Button>
