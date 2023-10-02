@@ -4,10 +4,11 @@ import { Favorite } from "./Favorite";
 
 describe("Favorite component", () => {
   const mockStation = {
-    forStations: "渋谷",
-    forStationsEn: "Shibuya",
-    trainClass: "急行",
-    id: 100000
+    id: 100000,
+    stationName: 'A駅',
+    stationNameKana: 'えー駅',
+    lineName: 'A線',
+    trackNum: 1
 
   };
 
@@ -40,8 +41,8 @@ describe("Favorite component", () => {
       </FavoriteContext.Provider>
     );
 
-    expect(getByText(mockStation.forStations)).toBeInTheDocument();
-    expect(getByText(mockStation.forStationsEn)).toBeInTheDocument();
-    expect(getByText(mockStation.trainClass)).toBeInTheDocument();
+    expect(getByText(mockStation.id)).toBeInTheDocument();
+    expect(getByText(mockStation.stationName)).toBeInTheDocument();
+    expect(getByText(mockStation.stationNameKana)).toBeInTheDocument();
   });
 });
