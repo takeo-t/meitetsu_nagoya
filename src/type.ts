@@ -28,4 +28,5 @@ export interface StationMappingItem {
     forStations: string;
     forStationsEn: string;
     trainClass: string;
+    id?: number;
 }

@@ -6,7 +6,8 @@ describe("Favorite component", () => {
   const mockStation = {
     forStations: "渋谷",
     forStationsEn: "Shibuya",
-    trainClass: "急行"
+    trainClass: "急行",
+    id: 100000
 
   };
 

@@ -18,10 +18,14 @@ export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) 
     const [favoriteStation, setFavoriteStation] = useState<StationMappingItem | null>(null);
     
     const saveFavoriteStation = async (station: StationMappingItem) => {
+        console.log("Station Object:", station);
+        console.log("Station ID:", station.id);
         try {
+            console.log("Sending data:", { station_id: station.id });
             const response = await axios.post('http://localhost:3000/api/v2/users/2/favorite_stations', {
-              station
+                station_id: station.id
             });
+            console.log("Response data:", response.data);
             setFavoriteStation(response.data);
         } catch (error) {
             console.error(error);
