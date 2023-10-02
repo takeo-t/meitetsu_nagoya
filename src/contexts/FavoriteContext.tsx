@@ -1,11 +1,11 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
-import { StationMappingItem } from "../type";
+import { Station } from "../type";
 
 export type FavoriteContextType = {
-    favoriteStation: StationMappingItem | null;
-    setFavoriteStation: (station: StationMappingItem) => void;
-    saveFavoriteStation: (station: StationMappingItem) => Promise<void>;
+    favoriteStation: Station | null;
+    setFavoriteStation: (station: Station) => void;
+    saveFavoriteStation: (station: Station) => Promise<void>;
 };
 
 export const FavoriteContext = createContext<FavoriteContextType | undefined>(undefined);
@@ -15,9 +15,9 @@ interface FavoriteProviderProps {
 }
 
 export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) => {
-    const [favoriteStation, setFavoriteStation] = useState<StationMappingItem | null>(null);
+    const [favoriteStation, setFavoriteStation] = useState<Station | null>(null);
     
-    const saveFavoriteStation = async (station: StationMappingItem) => {
+    const saveFavoriteStation = async (station: Station) => {
         console.log("Station Object:", station);
         console.log("Station ID:", station.id);
         try {

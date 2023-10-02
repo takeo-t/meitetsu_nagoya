@@ -50,11 +50,15 @@ export const SearchResults: FC<SearchResultsProps> = ({
 
     const { setFavoriteStation, saveFavoriteStation } = useFavorite();
 
+// const addToFavoriteHandler = async () => {
+//     if (!selectedStation) return;
+
+//     const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
+//     await saveFavoriteStation(item);
+// };
 const addToFavoriteHandler = async () => {
     if (!selectedStation) return;
-
-    const item = stationMapping[selectedStation.id.toString().substring(0, 2)];
-    await saveFavoriteStation(item);
+    await saveFavoriteStation(selectedStation);
 };
 
     return (
