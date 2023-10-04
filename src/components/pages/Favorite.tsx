@@ -6,12 +6,14 @@ export const Favorite: FC = memo(() => {
 
     if (!favoriteStation) return <p>お気に入りの駅はありません</p>;
 
-    // ここで favoriteStation を使用して情報を表示
     return (
         <div>
-            <p>{favoriteStation.forStations}</p>
-            <p>{favoriteStation.forStationsEn}</p>
-            <p>{favoriteStation.trainClass}</p>
+            <p>{favoriteStation.lineName}</p>
+            <p>{favoriteStation.stationNum}</p>
+            <p>{favoriteStation.stationName}</p>
+            <p>{favoriteStation.stationName}</p>
+            <p>{favoriteStation.stationNum}</p>
+            <p>{favoriteStation.position}</p>
         </div>
     );
 });
