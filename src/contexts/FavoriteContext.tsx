@@ -23,7 +23,11 @@ export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) 
         try {
             console.log("Sending data:", { station_id: station.id });
             const response = await axios.post('http://localhost:3000/api/v2/users/2/favorite_stations', {
-                station_id: station.id
+                favorite_station: { station2_id: station.id }
+        },{
+                headers: {
+                    'Content-Type': 'application/json'
+                  }
             });
             console.log("Response data:", response.data);
             setFavoriteStation(response.data);
