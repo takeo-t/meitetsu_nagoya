@@ -17,7 +17,6 @@ interface FavoriteProviderProps {
 
 export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) => {
     const [favoriteStation, setFavoriteStation] = useState<Station | null>(null);
-
     const { userId } = useAuth();
     
     const saveFavoriteStation = async (station: Station) => {
