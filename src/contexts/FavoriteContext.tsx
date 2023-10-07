@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
 import { Station } from "../type";
+import { useAuth } from "../hooks/useAuth";
 
 export type FavoriteContextType = {
     favoriteStation: Station | null;
@@ -16,13 +17,15 @@ interface FavoriteProviderProps {
 
 export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) => {
     const [favoriteStation, setFavoriteStation] = useState<Station | null>(null);
+
+    const { userId } = useAuth();
     
     const saveFavoriteStation = async (station: Station) => {
         console.log("Station Object:", station);
         console.log("Station ID:", station.id);
         try {
             console.log("Sending data:", { station_id: station.id });
-            const response = await axios.post('http://localhost:3000/api/v2/users/2/favorite_stations', {
+            const response = await axios.post(`http://localhost:3000/api/v2/users/${userId}/favorite_stations`, {
                 favorite_station: { station2_id: station.id }
         },{
                 headers: {
