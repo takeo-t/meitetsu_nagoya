@@ -6,7 +6,10 @@ import { useAuth } from "../hooks/useAuth";
 export type FavoriteContextType = {
     favoriteStation: Station | null;
     setFavoriteStation: (station: Station) => void;
+    deleteFavoriteStation: Station | null; 
+    setDeleteFavoriteStation: (station: Station) => void;
     saveFavoriteStation: (station: Station) => Promise<void>;
+    destroyFavoriteStation: (station: Station) => Promise<void>;
 };
 
 export const FavoriteContext = createContext<FavoriteContextType | undefined>(undefined);
@@ -17,6 +20,7 @@ interface FavoriteProviderProps {
 
 export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) => {
     const [favoriteStation, setFavoriteStation] = useState<Station | null>(null);
+    const [deleteFavoriteStation, setDeleteFavoriteStation] = useState<Station | null>(null);
     const { userId } = useAuth();
     
     const saveFavoriteStation = async (station: Station) => {
@@ -38,9 +42,24 @@ export const FavoriteProvider: React.FC<FavoriteProviderProps> = ({ children }) 
         }
     };
     
+    const destroyFavoriteStation = async (station: Station) => {
+        console.log("Station Object:", station);
+        console.log("Station ID:", station.id);
+        try {
+            const response = await axios.delete(`http://localhost:3000/api/v2/users/${userId}/favorite_stations/${station.id}`, {
+                headers: {
+                    'Content-Type': 'application/json'
+                  }
+                });
+            console.log("Response data:", response.data);
+            setDeleteFavoriteStation(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
-        <FavoriteContext.Provider value={{ favoriteStation, setFavoriteStation, saveFavoriteStation }}>
+        <FavoriteContext.Provider value={{ favoriteStation, setFavoriteStation, deleteFavoriteStation, setDeleteFavoriteStation, saveFavoriteStation, destroyFavoriteStation }}>
             {children}
         </FavoriteContext.Provider>
     );

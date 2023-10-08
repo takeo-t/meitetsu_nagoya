@@ -26,7 +26,10 @@ describe("Favorite component", () => {
     const mockFavoriteContext: FavoriteContextType = {
       favoriteStation: null,
       setFavoriteStation: jest.fn(),
-      saveFavoriteStation: jest.fn()
+      deleteFavoriteStation: null,
+      setDeleteFavoriteStation: jest.fn(),
+      saveFavoriteStation: jest.fn(),
+      destroyFavoriteStation: jest.fn()
     };
 
     const { getByText } = render(
@@ -42,7 +45,10 @@ describe("Favorite component", () => {
     const mockFavoriteContext: FavoriteContextType = {
       favoriteStation: mockStation,
       setFavoriteStation: jest.fn(),
-      saveFavoriteStation: jest.fn()
+      deleteFavoriteStation: null,
+      setDeleteFavoriteStation: jest.fn(),
+      saveFavoriteStation: jest.fn(),
+      destroyFavoriteStation: jest.fn()
     };
 
     const { getByText } = render(

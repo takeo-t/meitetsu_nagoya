@@ -8,6 +8,27 @@ import { MatchingStationComponent } from "../organisms/MatchingStationComponent"
 import { StationCandidates } from "../organisms/StationCandidates";
 
 
+export const toCamelCase = (str: string) => {
+    return str.replace(/([-_][a-z])/g, (group) =>
+      group.toUpperCase()
+        .replace('-', '')
+        .replace('_', '')
+    );
+  };
+
+export const keysToCamelCase = (obj: any): any => {
+    if (obj instanceof Array) {
+      return obj.map((v) => keysToCamelCase(v));
+    } else if (obj !== null && obj.constructor === Object) {
+      return Object.fromEntries(
+        Object.entries(obj).map(
+          ([key, value]) => [toCamelCase(key), keysToCamelCase(value)]
+        )
+      );
+    }
+    return obj;
+  };
+
 export const Home: FC = memo(() => {
     const [inputValue, setInputValue] = useState("");
     const [allStations, setAllStations] = useState<Station[]>([]);
@@ -17,26 +38,26 @@ export const Home: FC = memo(() => {
     const [changeStationData, setChangeStationData] = useState<{ data: ChangeStationData[] } | null>(null);
     const [matchingStation, setMatchingStation] = useState<ChangeStationData | null>(null);
 
-    const toCamelCase = (str: string) => {
-        return str.replace(/([-_][a-z])/g, (group) =>
-          group.toUpperCase()
-            .replace('-', '')
-            .replace('_', '')
-        );
-      };
+    //  const toCamelCase = (str: string) => {
+    //     return str.replace(/([-_][a-z])/g, (group) =>
+    //       group.toUpperCase()
+    //         .replace('-', '')
+    //         .replace('_', '')
+    //     );
+    //   };
     
-      const keysToCamelCase = (obj: any): any => {
-        if (obj instanceof Array) {
-          return obj.map((v) => keysToCamelCase(v));
-        } else if (obj !== null && obj.constructor === Object) {
-          return Object.fromEntries(
-            Object.entries(obj).map(
-              ([key, value]) => [toCamelCase(key), keysToCamelCase(value)]
-            )
-          );
-        }
-        return obj;
-      };
+    //   const keysToCamelCase = (obj: any): any => {
+    //     if (obj instanceof Array) {
+    //       return obj.map((v) => keysToCamelCase(v));
+    //     } else if (obj !== null && obj.constructor === Object) {
+    //       return Object.fromEntries(
+    //         Object.entries(obj).map(
+    //           ([key, value]) => [toCamelCase(key), keysToCamelCase(value)]
+    //         )
+    //       );
+    //     }
+    //     return obj;
+    //   };
 
     useEffect(() => {
         axios.get("http://localhost:3000/api/v2/stations")
