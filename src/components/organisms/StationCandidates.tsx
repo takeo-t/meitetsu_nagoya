@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 
 import { Station } from "../../type";
 
@@ -11,7 +11,7 @@ interface StationCandidatesProps {
 
 export const StationCandidates: FC<StationCandidatesProps> = ({ selectedStation, searchResults, handleClick}) => {
     return (
-        <>
+        <Flex justifyContent="center" flexDirection="column" alignItems="center">
         { !selectedStation &&
                 searchResults.map((station, index) => (
                     <div key={index} onClick={() => handleClick(station)}>
@@ -19,6 +19,6 @@ export const StationCandidates: FC<StationCandidatesProps> = ({ selectedStation,
                     </div>
                 ))
             }
-        </>
+        </Flex>
     );
 }

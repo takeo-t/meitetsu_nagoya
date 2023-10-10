@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import { Station } from "../../type";
 import { useFavorite } from "../../contexts/FavoriteContext";
 import { stationMapping, renderStationInfo } from "../../theme/stationUtils";
@@ -24,6 +24,7 @@ const addToFavoriteHandler = async () => {
 
     return (
         selectedStation &&
+        <Flex justifyContent="center" alignItems="center">
         <Box mb={5}>
             <Box mb={5} fontSize={['sm', 'md', 'lg']}>検索結果</Box>
             <Box fontSize={['sm', 'md', 'lg']}>
@@ -47,5 +48,6 @@ const addToFavoriteHandler = async () => {
                 );
             })()}
         </Box>
+        </Flex>
     );
 }
