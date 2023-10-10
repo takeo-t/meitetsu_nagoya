@@ -30,3 +30,7 @@ export interface StationMappingItem {
     trainClass: string;
     id?: number;
 }
+
+export interface StationStylesMappingType {
+    [key: string]: string;
+};
