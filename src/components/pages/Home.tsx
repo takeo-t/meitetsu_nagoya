@@ -39,17 +39,18 @@ export const Home: FC = memo(() => {
   const [matchingStation, setMatchingStation] =
     useState<ChangeStationData | null>(null);
 
+
+    console.log("allStations",allStations);
   useEffect(() => {
-    axios
-      .get("../meitetu_sta.json")
-      // axios.get("https://salty-coast-59175-f158b61abb95.herokuapp.com/api/v2/stations")
+      axios.get("/meitetu_sta.json")
       .then((response) => {
-        const dataCamelCased = keysToCamelCase(response.data.data);
+        console.log("Fetched JSON:", response.data); // デバッグ用
+        const dataCamelCased = keysToCamelCase(response.data); // ✅ 直接渡す
         setAllStations(dataCamelCased);
-        console.log(dataCamelCased);
       })
       .catch((error) => {
-        alert("読み込みに失敗しました。");
+        console.error("Error loading JSON:", error);
+        alert(`読み込みに失敗しました: ${error.message}`);
       });
   }, []);
 
@@ -93,7 +94,7 @@ export const Home: FC = memo(() => {
       setSelectedStation(station);
       if (station.changeStation) {
         axios
-          .get("../change_stations.json")
+          .get("/change_stations.json")
           // axios.get('https://salty-coast-59175-f158b61abb95.herokuapp.com/api/v2/stations/change_stations')
           .then((response) => {
             console.log("Fetched data:", response.data);
