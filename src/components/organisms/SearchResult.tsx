@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { Station } from "../../type";
-import { useFavorite } from "../../contexts/FavoriteContext";
 import { stationMapping, renderStationInfo } from "../../theme/stationUtils";
 
 interface SearchResultsProps {
@@ -14,13 +13,6 @@ export const SearchResults: FC<SearchResultsProps> = ({
     selectedStation,
     onClick,
 }) => {
-
-const { saveFavoriteStation } = useFavorite();
-
-const addToFavoriteHandler = async () => {
-    if (!selectedStation) return;
-    await saveFavoriteStation(selectedStation);
-};
 
     return (
         selectedStation &&

@@ -1,7 +1,7 @@
 import { memo, FC, useState, useEffect } from "react";
 import axios from "axios";
 import { SearchResults } from "../organisms/SearchResult";
-import { Station, StationMappingItem, ChangeStationData } from "../../type";
+import { Station, ChangeStationData } from "../../type";
 import { ModalComponent } from "../organisms/ModalComponent";
 import { SearchComponent } from "../organisms/SearchComponent";
 import { MatchingStationComponent } from "../organisms/MatchingStationComponent";
